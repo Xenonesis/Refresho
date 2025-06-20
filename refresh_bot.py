@@ -18,6 +18,9 @@ def print_banner():
 ██╔══██╗██╔══╝  ██╔══╝  ██╔══██╗██╔══╝  ╚════██║██╔══██║██║   ██║
 ██║  ██║███████╗██║     ██║  ██║███████╗███████║██║  ██║╚██████╔╝
 ╚═╝  ╚═╝╚══════╝╚═╝     ╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝ ╚═════╝ 
+
+\033[92m
+
 \033[0m
 \033[96m[+] Advanced Web Refresher Tool\033[0m
 \033[93m[*] Developed by Addy@Xenonesis\033[0m
@@ -33,6 +36,20 @@ def loading_animation():
         sys.stdout.flush()
         time.sleep(0.1)
     print("\r\033[92m[✓] Ready to hack!\033[0m" + " " * 10)
+
+def matrix_effect(duration=3):
+    import random
+    import string
+    columns = 80
+    rows = 20
+    chars = string.ascii_letters + string.digits + "!@#$%^&*()-_=+[]{};:,.<>/?\\|"
+    try:
+        for _ in range(duration * 10):
+            line = ''.join(random.choice(chars) for _ in range(columns))
+            print(f"\033[92m{line}\033[0m")
+            time.sleep(0.1)
+    except KeyboardInterrupt:
+        pass
 
 def get_user_config():
     config = {}
@@ -234,7 +251,17 @@ def refresho(url, refresh_count, delay=1, headless=True):
             print(f"\033[91m[!] Mission partially completed: {success_count:,}/{refresh_count:,} refreshes\033[0m")
             print(f"\033[93m[*] Partial execution time: {execution_time:.2f} seconds\033[0m")
 
+import os
+
 def main():
+    user_flag_file = ".refresho_user"
+    if os.path.exists(user_flag_file):
+        print("\033[92m[+] Welcome back, user!\033[0m\n")
+    else:
+        print("\033[96m[+] Welcome to Refresho! Let's get started.\033[0m\n")
+        with open(user_flag_file, "w") as f:
+            f.write("visited")
+
     try:
         config = get_user_config()
         print("\n\033[95m[*] Configuration Summary:\033[0m")
