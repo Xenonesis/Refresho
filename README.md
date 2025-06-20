@@ -38,6 +38,8 @@
 - **User Agent Rotation** - Dynamic browser fingerprinting
 - **Proxy Support** - Network anonymization
 - **Screenshot Capture** - Visual intelligence gathering
+- **Site Intelligence Analysis** - Comprehensive target reconnaissance
+- **History Tracking** - Detailed site analysis reports
 - **Error Recovery** - Automatic failure handling
 - **Performance Analytics** - Real-time speed metrics
 
@@ -95,9 +97,18 @@ python refresh_bot.py
 ### 🎯 **Target Selection**
 ```
 [1] Default: https://github.com/Xenonesis
-[2] Google: https://google.com  
-[3] Custom URL
+[2] Stack Overflow: https://stackoverflow.com
+[3] Reddit: https://reddit.com
+[4] Custom URL
+[5] Manage saved URLs
 ```
+
+### 🔗 **Dynamic URL Management**
+- **Temporary URL Storage** - Save frequently used URLs with custom names
+- **Persistent Storage** - URLs saved between sessions in `saved_urls.json`
+- **Easy Management** - Add, delete, and organize URLs on the fly
+- **Custom Naming** - Give meaningful names to your saved URLs
+- **No Google Preset** - Removed static Google option for cleaner interface
 
 ### 🌐 **Browser Modes**
 ```
@@ -110,6 +121,9 @@ python refresh_bot.py
 - ✅ Proxy rotation
 - ✅ User agent rotation  
 - ✅ Screenshot capture
+- ✅ Site intelligence analysis
+- ✅ Dynamic URL management
+- ✅ History tracking & reporting
 - ✅ Performance monitoring
 - ✅ Error recovery
 
@@ -147,6 +161,94 @@ python refresh_bot.py
 - Realistic keystroke simulation
 - Adjustable typing speed
 - Professional terminal feel
+
+---
+
+## 🔗 URL MANAGEMENT SYSTEM
+
+### 🎯 **Dynamic URL Storage**
+- **Custom URL Lists** - Save frequently used URLs with meaningful names
+- **Session Persistence** - URLs automatically saved between sessions
+- **Quick Access** - Select saved URLs from numbered menu
+- **Easy Management** - Add, delete, and organize URLs on demand
+
+### 💾 **Storage Format**
+```json
+[
+  {
+    "name": "Stack Overflow",
+    "url": "https://stackoverflow.com"
+  },
+  {
+    "name": "GitHub",
+    "url": "https://github.com"
+  }
+]
+```
+
+### 🔧 **Management Options**
+- **In-App Management** - Use option "Manage saved URLs" during target selection
+- **Standalone Tool** - Run `python manage_urls.py` for dedicated URL management
+- **Direct File Edit** - Modify `saved_urls.json` directly if needed
+
+### ✨ **Features**
+- **Auto-Save Option** - Automatically save custom URLs when entered
+- **Smart Naming** - Auto-generate names from domain if not specified
+- **Clean Interface** - No hardcoded presets, fully customizable
+- **Lightweight Storage** - Simple JSON format for easy backup/sharing
+
+---
+
+## 🔍 SITE INTELLIGENCE SYSTEM
+
+### 🎯 **Comprehensive Target Analysis**
+- **Page Metrics** - Load time, size, performance data
+- **Content Analysis** - Links, images, forms, scripts count
+- **Technology Detection** - Frameworks and libraries identification
+- **Security Assessment** - HTTPS, cookies, headers analysis
+- **SEO Information** - Title, description, keywords extraction
+
+### 📈 **Real-Time Intelligence Display**
+```
++==============================================================+
+|                    SITE INTELLIGENCE REPORT                 |
++==============================================================+
+[TARGET] https://example.com
+[TITLE] Example Domain
+[DOMAIN] example.com
+[TIMESTAMP] 2024-01-01 12:00:00
+
+[PERFORMANCE METRICS]
+  Load Time: 0.85s
+  Page Size: 1,256 bytes
+  Security: HTTPS
+
+[CONTENT ANALYSIS]
+  Links: 15
+  Images: 8
+  Forms: 2
+  Scripts: 5
+  Stylesheets: 3
+  Cookies: 4
+
+[TECHNOLOGIES DETECTED]
+  • jQuery
+  • Bootstrap
+  • React
+```
+
+### 📁 **Automated History Tracking**
+- **JSON Reports** - Detailed analysis saved per site
+- **Organized Storage** - Files named by domain and timestamp
+- **Historical Comparison** - Track changes over time
+- **Export Ready** - Standard JSON format for integration
+
+### 🔎 **Intelligence Categories**
+- **Technical Stack** - JavaScript frameworks, CSS libraries
+- **Performance Data** - Load times, page sizes, response metrics
+- **Security Posture** - SSL status, cookie configuration
+- **Content Structure** - Element counts, form analysis
+- **SEO Optimization** - Meta tags, descriptions, keywords
 
 ---
 
@@ -277,6 +379,7 @@ refresho-v2/
 ├── test_refresh_bot.py    # Test arsenal
 ├── README.md              # This documentation
 ├── screenshots/           # Captured intel
+├── history/               # Site analysis reports
 └── logs/                  # Operation records
 ```
 
