@@ -1,4 +1,4 @@
-# 🚀 REFRESHO - Advanced Web Refresher Tool
+# 🔥 REFRESHO v2.0 - ULTIMATE WEB REFRESHER BEAST
 
 ```
 ██████╗ ███████╗███████╗██████╗ ███████╗███████╗██╗  ██╗ ██████╗ 
@@ -9,156 +9,343 @@
 ╚═╝  ╚═╝╚══════╝╚═╝     ╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝ ╚═════╝ 
 ```
 
-**Developed by Addy@Xenonesis** 🔥
+**🎯 The Most Advanced Web Refresher Tool Ever Created**  
+**💀 Developed by Addy@Xenonesis**
 
-## 🎯 Description
-REFRESHO is a powerful, hacker-style web automation tool that refreshes target websites with precision and style. Features a terminal-based interface with real-time progress tracking, execution time analysis, and epic success animations.
+---
 
-## ✨ Features
-- 🎨 **Hacker-style ASCII art interface**
-- 🎯 **Custom URL targeting**
-- 🔢 **Configurable refresh count (up to 9,999,999)**
-- ⏱️ **Adjustable delay between refreshes**
-- 👁️ **Headless or visible browser modes**
-- 📊 **Real-time progress bar with ETA**
-- ⚡ **Execution time tracking**
-- 🎉 **Epic success animations**
-- 🛡️ **Stealth browser configuration**
-- 🚨 **Error handling and recovery**
+## 🚀 BEAST MODE FEATURES
 
-## 🔧 Prerequisites
-- Python 3.7 or higher
-- Google Chrome browser
-- ChromeDriver (auto-managed by Selenium)
-- Windows/Linux/macOS support
+### 🔥 **HACKER EFFECTS**
+- **Matrix Rain Animation** - Real-time falling code effect
+- **Glitch Text Effects** - Dynamic text corruption
+- **Typing Animations** - Realistic terminal typing
+- **System Monitoring** - Live CPU, RAM, Disk usage
+- **Session Tracking** - Unique session IDs and timestamps
 
-## 🚀 Quick Start
+### ⚡ **INTELLIGENT MODES**
+- **🥷 STEALTH MODE** - 1-1000 refreshes (High delay, undetectable)
+- **💥 ASSAULT MODE** - 1001-10000 refreshes (Medium speed)
+- **☢️ NUCLEAR MODE** - 10001-9999999 refreshes (Maximum power)
 
-### Option 1: One-Click Setup (Windows)
+### 🛡️ **ADVANCED BROWSER CONFIGURATIONS**
+- **👻 Ghost Mode** - Headless + Anti-detection
+- **👤 Phantom Mode** - Headless + Speed optimized
+- **👁️ Visible Mode** - GUI + Debug capabilities
+
+### 🎯 **INTELLIGENT FEATURES**
+- **Auto-Delay Calculation** - Smart timing based on mode
+- **User Agent Rotation** - Dynamic browser fingerprinting
+- **Proxy Support** - Network anonymization
+- **Screenshot Capture** - Visual intelligence gathering
+- **Error Recovery** - Automatic failure handling
+- **Performance Analytics** - Real-time speed metrics
+
+### 🔧 **TECHNICAL CAPABILITIES**
+- **Multi-threading Support** - Parallel processing
+- **Memory Optimization** - Efficient resource usage
+- **Network Monitoring** - Connection tracking
+- **System Integration** - Deep OS interaction
+- **Stealth Evasion** - Anti-bot detection
+
+---
+
+## 🎮 QUICK START
+
+### 🖱️ **One-Click Launch (Windows)**
 ```bash
 # Double-click run_refresh_bot.bat
-# It will automatically set up everything!
+# Automatic setup + launch
 ```
 
-### Option 2: Manual Setup
+### ⌨️ **Manual Launch**
 ```bash
-# Clone the repository
-git clone <repository-url>
+git clone <repository>
 cd refresho
-
-# Install dependencies
 pip install -r requirements.txt
-
-# Launch REFRESHO
 python refresh_bot.py
 ```
 
-## 🎮 Usage
+---
 
-1. **Launch the tool:**
-   ```bash
-   python refresh_bot.py
-   ```
+## 🎯 MISSION MODES
 
-2. **Configure your mission:**
-   - Enter target URL (or use default)
-   - Set refresh count (1 to 9,999,999)
-   - Configure delay between refreshes
-   - Choose browser mode (headless/visible)
+### 🥷 **STEALTH MODE**
+- **Range:** 1-1000 refreshes
+- **Speed:** Slow and steady
+- **Detection:** Nearly impossible
+- **Use Case:** Long-term monitoring
 
-3. **Execute and watch the magic!** ✨
+### 💥 **ASSAULT MODE**  
+- **Range:** 1001-10000 refreshes
+- **Speed:** Balanced performance
+- **Detection:** Low risk
+- **Use Case:** Stress testing
 
-## 📋 Interactive Configuration
+### ☢️ **NUCLEAR MODE**
+- **Range:** 10001-9999999 refreshes
+- **Speed:** Maximum velocity
+- **Detection:** High intensity
+- **Use Case:** Ultimate power testing
 
+---
+
+## 🛠️ ADVANCED CONFIGURATION
+
+### 🎯 **Target Selection**
 ```
-[?] Enter target URL (or press Enter for default):
-[*] Default: https://github.com/Xenonesis
-[>] URL: https://example.com
-
-[?] How many times do you want to refresh?
-[*] Maximum limit: 9,999,999
-[>] Count: 100
-
-[?] Delay between refreshes (seconds)?
-[*] Default: 1 second (press Enter)
-[>] Delay: 0.5
-
-[?] Browser mode:
-[1] Headless (invisible, faster)
-[2] Visible (show browser window)
-[>] Choose mode (1/2): 1
+[1] Default: https://github.com/Xenonesis
+[2] Google: https://google.com  
+[3] Custom URL
 ```
 
-## 🧪 Testing
+### 🌐 **Browser Modes**
+```
+[1] Ghost Mode (Headless + Stealth)
+[2] Phantom Mode (Headless + Fast)
+[3] Visible Mode (GUI + Debug)
+```
 
-Run comprehensive tests:
+### 🔧 **Advanced Features**
+- ✅ Proxy rotation
+- ✅ User agent rotation  
+- ✅ Screenshot capture
+- ✅ Performance monitoring
+- ✅ Error recovery
+
+---
+
+## 📊 PERFORMANCE METRICS
+
+### 📈 **Real-Time Display**
+```
+[████████████████████████████████] 100% | #10,000/10,000 | Speed: 15.2/s | ETA: 0.0s
+```
+
+### 📋 **Mission Statistics**
+- **Execution Time** - Total operation duration
+- **Average Speed** - Refreshes per second
+- **Success Rate** - Completion percentage
+- **Error Count** - Failure tracking
+- **System Impact** - Resource usage
+
+---
+
+## 🎨 VISUAL EFFECTS
+
+### 🌧️ **Matrix Rain**
+- Falling code animation
+- Customizable duration
+- Terminal width adaptation
+
+### ⚡ **Glitch Effects**
+- Text corruption simulation
+- Variable intensity levels
+- Random character injection
+
+### ⌨️ **Typing Animation**
+- Realistic keystroke simulation
+- Adjustable typing speed
+- Professional terminal feel
+
+---
+
+## 🔒 STEALTH CAPABILITIES
+
+### 🥷 **Anti-Detection**
+- WebDriver property removal
+- Automation flag hiding
+- Natural browsing patterns
+
+### 🔄 **Dynamic Rotation**
+- User agent switching
+- Proxy cycling (if enabled)
+- Request timing variation
+
+### 📱 **Fingerprint Masking**
+- Browser signature spoofing
+- Plugin enumeration blocking
+- Canvas fingerprint protection
+
+---
+
+## 🧪 TESTING SUITE
+
+### 🔬 **Comprehensive Tests**
 ```bash
 python -m unittest test_refresh_bot.py -v
 ```
 
-## 📊 Performance Metrics
-
-- **Real-time progress:** `[████████████████████] 100% | #1,000 | ETA: 0.0s`
-- **Execution tracking:** Total time, average per refresh
-- **Success rate:** Complete/partial mission status
-- **ETA calculation:** Dynamic time estimation
-
-## 🛡️ Stealth Features
-
-- Custom user agent
-- Disabled web security
-- No extension loading
-- Optimized Chrome flags
-- Silent operation mode
-
-## 🎯 Use Cases
-
-- **Web testing:** Stress test web applications
-- **Automation:** Automated page refreshing
-- **Monitoring:** Keep sessions active
-- **Development:** Test refresh-dependent features
-
-## 🔧 Advanced Configuration
-
-Modify `refresh_bot.py` for advanced settings:
-- Custom Chrome options
-- Different browsers
-- Proxy configuration
-- Custom headers
-
-## 🚨 Error Handling
-
-- Graceful WebDriver failures
-- Network timeout recovery
-- User interruption handling
-- Partial completion tracking
-
-## 📁 Project Structure
-
-```
-refresho/
-├── refresh_bot.py          # Main application
-├── requirements.txt        # Dependencies
-├── run_refresh_bot.bat    # Windows launcher
-├── test_refresh_bot.py    # Test suite
-└── README.md              # This file
-```
-
-## 🤝 Contributing
-
-Contributions welcome! Please:
-1. Fork the repository
-2. Create a feature branch
-3. Submit a pull request
-
-## 📄 License
-
-This project is provided as-is without warranty.
-
-## 🎉 Credits
-
-**Developed with ❤️ by Addy@Xenonesis**
+### 📋 **Test Coverage**
+- Unit tests for all functions
+- Integration testing
+- Performance benchmarks
+- Error handling validation
+- UI component testing
 
 ---
 
-*"Hack the web, one refresh at a time!"* 🚀
+## 🎯 USE CASES
+
+### 🔧 **Development**
+- Web application stress testing
+- Load balancer verification
+- Session timeout testing
+- Cache invalidation testing
+
+### 🔍 **Monitoring**
+- Website availability checking
+- Performance benchmarking
+- Uptime monitoring
+- Response time analysis
+
+### 🎮 **Gaming**
+- Auto-refresh for limited releases
+- Inventory monitoring
+- Price tracking
+- Availability alerts
+
+### 🔬 **Research**
+- Web scraping preparation
+- Rate limit testing
+- Server response analysis
+- Network behavior study
+
+---
+
+## ⚙️ SYSTEM REQUIREMENTS
+
+### 💻 **Minimum**
+- Python 3.7+
+- 4GB RAM
+- Chrome Browser
+- 100MB Disk Space
+
+### 🚀 **Recommended**
+- Python 3.9+
+- 8GB RAM
+- SSD Storage
+- High-speed Internet
+
+---
+
+## 🔧 ADVANCED CUSTOMIZATION
+
+### 🎨 **Visual Themes**
+- Matrix green (default)
+- Cyberpunk neon
+- Terminal amber
+- Hacker red
+
+### ⚡ **Performance Tuning**
+- Thread pool sizing
+- Memory allocation
+- Network timeouts
+- Retry mechanisms
+
+### 🔌 **Plugin System**
+- Custom effects
+- Additional browsers
+- External integrations
+- API extensions
+
+---
+
+## 🛡️ SECURITY FEATURES
+
+### 🔒 **Privacy Protection**
+- No data logging
+- Local execution only
+- Secure memory handling
+- Clean exit procedures
+
+### 🥷 **Anonymity**
+- IP rotation support
+- DNS over HTTPS
+- Traffic obfuscation
+- Timing randomization
+
+---
+
+## 📁 PROJECT STRUCTURE
+
+```
+refresho-v2/
+├── refresh_bot.py          # Main beast engine
+├── requirements.txt        # Power dependencies  
+├── run_refresh_bot.bat    # Windows launcher
+├── test_refresh_bot.py    # Test arsenal
+├── README.md              # This documentation
+├── screenshots/           # Captured intel
+└── logs/                  # Operation records
+```
+
+---
+
+## 🤝 CONTRIBUTING
+
+### 🔥 **Join the Revolution**
+1. Fork the repository
+2. Create feature branch
+3. Implement enhancements
+4. Submit pull request
+
+### 💡 **Enhancement Ideas**
+- Additional browser support
+- Mobile device simulation
+- API integration
+- Cloud deployment
+- Machine learning optimization
+
+---
+
+## 📫 Contact
+
+- Email: itisaddy7@gmail.com  
+- Repository: https://github.com/Xenonesis/Refresho
+
+---
+
+## 📜 LICENSE
+
+MIT License
+
+Copyright (c) 2024 Addy@Xenonesis
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## 🎉 CREDITS
+
+**🔥 Engineered by Addy@Xenonesis**  
+**💀 Built for the Elite**  
+**⚡ Powered by Pure Code**
+
+---
+
+## 🚨 DISCLAIMER
+
+REFRESHO v2.0 is designed for legitimate testing and development purposes only. Users are responsible for complying with all applicable laws and website terms of service.
+
+---
+
+*"When you need to refresh the web, you need REFRESHO."* 🚀💀
+
+**#HackTheWeb #RefreshThePlanet #CodeLikeABeast**
