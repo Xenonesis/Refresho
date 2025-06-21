@@ -62,7 +62,7 @@
 
 ### ⌨️ **Manual Launch**
 ```bash
-git clone <repository>
+git clone https://github.com/Xenonesis/Refresho.git
 cd refresho
 pip install -r requirements.txt
 python refresh_bot.py
