@@ -404,8 +404,8 @@ refresho-v2/
 
 ## 📫 Contact
 
-- Email: itisaddy7@gmail.com  
-- Repository: https://github.com/Xenonesis/Refresho
+- Email: itisaddy7@gmail.com
+- Repository: https://github.com/Xenonesis/Refresho.git
 
 ---
 
