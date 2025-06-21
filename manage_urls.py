@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-REFRESHO v2.0 - URL Management Utility
+REFRESHO v3.0 - URL Management Utility
 Standalone tool to manage saved URLs
 """
 import sys
@@ -8,7 +8,7 @@ sys.path.append('.')
 from refresh_bot import URLManager
 
 def main():
-    print("REFRESHO v2.0 - URL Management Utility")
+    print("REFRESHO v3.0 - URL Management Utility")
     print("=" * 50)
     
     while True:

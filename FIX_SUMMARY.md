@@ -1,4 +1,4 @@
-# REFRESHO v2.0 - WebDriver Fix Summary
+# REFRESHO v3.0 - WebDriver Fix Summary
 
 ## 🔧 Issues Fixed
 
@@ -82,7 +82,7 @@ service = Service(ChromeDriverManager().install())
 
 ## 🎉 Result
 
-Your REFRESHO v2.0 is now fully operational and ready for:
+Your REFRESHO v3.0 is now fully operational and ready for:
 - 🥷 STEALTH MODE (1-1000 refreshes)
 - 💥 ASSAULT MODE (1001-10000 refreshes)  
 - ☢️ NUCLEAR MODE (10001-9999999 refreshes)

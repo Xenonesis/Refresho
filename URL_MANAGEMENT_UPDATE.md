@@ -125,7 +125,7 @@ class URLManager:
 
 **🎉 Update Complete!**
 
-Your REFRESHO v2.0 now has a flexible, user-controlled URL management system instead of the static Google preset.
+Your REFRESHO v3.0 now has a flexible, user-controlled URL management system instead of the static Google preset.
 
 *Update implemented by Amazon Q Developer*  
 *Original tool by Addy@Xenonesis*

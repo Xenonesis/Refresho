@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-REFRESHO v2.0 - History Viewer
+REFRESHO v3.0 - History Viewer
 View saved site analysis reports
 """
 import os
@@ -61,7 +61,7 @@ def display_report(filename):
         print(f"[ERROR] Failed to read report: {e}")
 
 def main():
-    print("REFRESHO v2.0 - Site Analysis History Viewer")
+    print("REFRESHO v3.0 - Site Analysis History Viewer")
     print("=" * 50)
     
     reports = list_reports()

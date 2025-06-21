@@ -7,7 +7,7 @@ sys.path.append('.')
 from refresh_bot import URLManager
 
 def demo_url_selection():
-    print("REFRESHO v2.0 - URL Selection Demo")
+    print("REFRESHO v3.0 - URL Selection Demo")
     print("=" * 50)
     
     # Show current saved URLs

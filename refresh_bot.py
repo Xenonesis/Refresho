@@ -71,8 +71,10 @@ class URLManager:
     def load_saved_urls():
         """Load saved URLs from file"""
         try:
-            if os.path.exists('saved_urls.json'):
-                with open('saved_urls.json', 'r', encoding='utf-8') as f:
+            if not os.path.exists('saved_urls'):
+                os.makedirs('saved_urls')
+            if os.path.exists('saved_urls/saved_urls.json'):
+                with open('saved_urls/saved_urls.json', 'r', encoding='utf-8') as f:
                     return json.load(f)
         except:
             pass
@@ -82,7 +84,9 @@ class URLManager:
     def save_urls(urls):
         """Save URLs to file"""
         try:
-            with open('saved_urls.json', 'w', encoding='utf-8') as f:
+            if not os.path.exists('saved_urls'):
+                os.makedirs('saved_urls')
+            with open('saved_urls/saved_urls.json', 'w', encoding='utf-8') as f:
                 json.dump(urls, f, indent=2, ensure_ascii=False)
         except Exception as e:
             print(f"\033[91m[ERROR] Failed to save URLs: {e}\033[0m")
@@ -270,7 +274,7 @@ def print_banner():
 ╚═╝  ╚═╝╚══════╝╚═╝     ╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝ ╚═════╝ 
 \033[0m
 \033[96m+==============================================================+\033[0m
-\033[96m|              ADVANCED WEB REFRESHER TOOL v2.0              |\033[0m
+\033[96m|              ADVANCED WEB REFRESHER TOOL v3.0              |\033[0m
 \033[96m|                 Developed by Addy@Xenonesis                |\033[0m
 \033[96m+==============================================================+\033[0m
 """
@@ -635,8 +639,11 @@ def refresho_beast(config):
         
         # Screenshot if enabled
         if config.get('screenshot_capture', False):
+            # Create target_screenshots directory if it doesn't exist
+            if not os.path.exists('target_screenshots'):
+                os.makedirs('target_screenshots')
             timestamp = int(time.time())
-            screenshot_file = f"target_screenshot_{timestamp}.png"
+            screenshot_file = f"target_screenshots/target_screenshot_{timestamp}.png"
             driver.save_screenshot(screenshot_file)
             print(f"\033[95m[INTEL] Screenshot captured: {screenshot_file}\033[0m")
         
@@ -701,7 +708,7 @@ def main():
         clear_screen()
         
         # Welcome sequence
-        HackerEffects.typing_effect("\033[96m[SYSTEM] Initializing REFRESHO v2.0...\033[0m", 0.05)
+        HackerEffects.typing_effect("\033[96m[SYSTEM] Initializing REFRESHO v3.0...\033[0m", 0.05)
         time.sleep(1)
         
         config = get_advanced_config()

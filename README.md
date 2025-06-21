@@ -1,4 +1,4 @@
-# 🔥 REFRESHO v2.0 - ULTIMATE WEB REFRESHER BEAST
+# 🔥 REFRESHO v3.0 - ULTIMATE WEB REFRESHER BEAST
 
 ```
 ██████╗ ███████╗███████╗██████╗ ███████╗███████╗██╗  ██╗ ██████╗ 
@@ -216,7 +216,7 @@ python refresh_bot.py
 [TARGET] https://example.com
 [TITLE] Example Domain
 [DOMAIN] example.com
-[TIMESTAMP] 2024-01-01 12:00:00
+[TIMESTAMP] 2025-01-01 12:00:00
 
 [PERFORMANCE METRICS]
   Load Time: 0.85s
@@ -413,7 +413,7 @@ refresho-v2/
 
 MIT License
 
-Copyright (c) 2024 Addy@Xenonesis
+Copyright (c) 2025 Addy@Xenonesis
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -445,7 +445,26 @@ SOFTWARE.
 
 ## 🚨 DISCLAIMER
 
-REFRESHO v2.0 is designed for legitimate testing and development purposes only. Users are responsible for complying with all applicable laws and website terms of service.
+REFRESHO v3.0 is designed for legitimate testing and development purposes only. Users are responsible for complying with all applicable laws and website terms of service.
+
+---
+
+## 💻 Tech Stack
+
+<p align="center">
+  <img src="rf.png" alt="Refresho Logo" width="200"/>
+</p>
+
+Refresho is built primarily with **Python**, leveraging its versatility for scripting and automation. The core web interaction is powered by **Selenium WebDriver**, enabling robust browser automation and interaction with web elements.
+
+**Key Technologies:**
+- **Python:** The primary programming language for the application logic.
+- **Selenium WebDriver:** Used for browser automation, supporting various browsers like Chrome.
+- **Chromedriver:** The specific WebDriver for controlling Chrome.
+- **JSON:** For structured data storage, particularly for URL management.
+- **Command Line Interface (CLI):** For user interaction and configuration.
+
+This combination provides a powerful, flexible, and extensible platform for web refreshing and site intelligence.
 
 ---
 

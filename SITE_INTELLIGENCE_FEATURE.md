@@ -2,7 +2,7 @@
 
 ## 🎯 New Feature Added: Comprehensive Site Analysis
 
-Your REFRESHO v2.0 now includes a powerful **Site Intelligence System** that analyzes every target website and provides detailed reconnaissance reports.
+Your REFRESHO v3.0 now includes a powerful **Site Intelligence System** that analyzes every target website and provides detailed reconnaissance reports.
 
 ## 🚀 What It Does
 
@@ -142,7 +142,7 @@ python view_history.py
 
 ---
 
-**🔥 Your REFRESHO v2.0 is now a complete web intelligence platform!**
+**🔥 Your REFRESHO v3.0 is now a complete web intelligence platform!**
 
 *Feature developed by Amazon Q Developer*  
 *Original tool by Addy@Xenonesis*

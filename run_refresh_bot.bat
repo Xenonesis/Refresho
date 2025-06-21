@@ -1,6 +1,6 @@
 @echo off
 color 0A
-title REFRESHO v2.0 - ULTIMATE WEB REFRESHER BEAST by Addy@Xenonesis
+title REFRESHO v3.0 - ULTIMATE WEB REFRESHER BEAST by Addy@Xenonesis
 mode con: cols=120 lines=40
 
 echo.
@@ -104,7 +104,7 @@ echo █████████████████████████
 echo █                                        LAUNCH SEQUENCE                                                       █
 echo ████████████████████████████████████████████████████████████████████████████████████████████████████████████████
 echo.
-echo [READY] REFRESHO v2.0 is armed and ready for deployment
+echo [READY] REFRESHO v3.0 is armed and ready for deployment
 echo [MODES] Available: STEALTH ^| ASSAULT ^| NUCLEAR
 echo [FEATURES] Matrix effects, System monitoring, Intelligent targeting
 echo [CAPABILITIES] Up to 9,999,999 refreshes with advanced evasion
@@ -116,7 +116,7 @@ for /L %%i in (3,-1,1) do (
     timeout /t 1 /nobreak >nul
 )
 
-echo [LAUNCH] Initiating REFRESHO v2.0...
+echo [LAUNCH] Initiating REFRESHO v3.0...
 echo.
 
 REM Execute REFRESHO
