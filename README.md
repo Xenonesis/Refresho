@@ -540,22 +540,11 @@ graph TD
 
 ## 🚀 REFRESHO MISSION QUOTES ⚡
 
-[![View Animated Version](https://img.shields.io/badge/View-Animated_Version-blue?style=for-the-badge)](https://xenonesis.github.io/Refresho/mission-quotes.html)
-
-> **"When you need to refresh the web, you need REFRESHO."**
-> *The foundation of our mission*
-
-> **"Hack the refresh. Own the web."**
-> *Our approach to web automation*
-
-> **"One bot to refresh them all."**
-> *The power of our technology*
-
-> **"In the world of web, persistence is power."**
-> *Our core philosophy*
-
-> **"REFRESHO: Because manual refresh is too mainstream."**
-> *Our modern solution*
+<iframe
+  src="https://xenonesis.github.io/Refresho/mission-quotes.html"
+  style="width:100%; height:500px; border:none; border-radius:10px;"
+  title="Refresho Mission Quotes"
+></iframe>
 
 **#HackTheWeb #RefreshThePlanet #CodeLikeABeast**
 
