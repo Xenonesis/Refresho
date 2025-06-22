@@ -1,3 +1,5 @@
+![REFRESHO](rf.png)
+
 # Contributing to REFRESHO
 
 Thank you for your interest in contributing to REFRESHO! This document provides guidelines and instructions for contributing to the project.

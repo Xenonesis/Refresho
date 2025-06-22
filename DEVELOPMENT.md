@@ -1,3 +1,5 @@
+![REFRESHO](rf.png)
+
 # Development Guide for REFRESHO
 
 This guide covers everything you need to know to start developing REFRESHO.

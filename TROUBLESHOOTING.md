@@ -1,3 +1,5 @@
+![REFRESHO](rf.png)
+
 # REFRESHO Troubleshooting Guide
 
 This guide helps you diagnose and resolve common issues encountered while using REFRESHO.
