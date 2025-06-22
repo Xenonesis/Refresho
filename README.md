@@ -540,109 +540,93 @@ graph TD
 
 <style>
   .mission-quotes {
-    background: linear-gradient(45deg, #0a0a0a, #020202);
-    border: 2px solid #00ff88;
-    border-radius: 25px;
-    padding: 30px;
+    background: #0a0a0a;
+    padding: 40px 20px;
     margin: 50px 0;
-    box-shadow: 0 0 30px rgba(0, 255, 136, 0.4);
-    animation: glow 3s ease-in-out infinite alternate;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .mission-quotes::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(0, 255, 136, 0.1) 10%, transparent 50%);
-    animation: rotate 10s linear infinite;
-    z-index: 0;
+    text-align: center;
   }
 
   .mission-quotes h2 {
-    text-align: center;
     color: #00ff88;
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    animation: text-glow 2s ease-in-out infinite alternate;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
     position: relative;
-    z-index: 1;
+    display: inline-block;
+  }
+
+  .mission-quotes h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 60px;
+    height: 3px;
+    background: #00ff88;
+    transform: translateX(-50%);
+    animation: line-grow 0.8s ease-out;
   }
 
   .mission-quotes blockquote {
     color: #fff;
-    font-size: 1.3rem;
-    margin: 20px 0;
-    padding: 15px 20px;
-    border-left: 4px solid #00ff88;
-    animation: slide-in 0.5s ease-out;
+    font-size: 1.2rem;
+    margin: 25px auto;
+    max-width: 800px;
+    padding: 20px;
     position: relative;
-    z-index: 1;
-    transition: all 0.3s ease;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
+    opacity: 0;
+    animation: fade-in 0.6s ease-out forwards;
   }
 
-  .mission-quotes blockquote:hover {
-    transform: translateX(10px);
-    box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
-    background: rgba(255, 255, 255, 0.1);
-  }
+  .mission-quotes blockquote:nth-child(2) { animation-delay: 0.2s; }
+  .mission-quotes blockquote:nth-child(3) { animation-delay: 0.4s; }
+  .mission-quotes blockquote:nth-child(4) { animation-delay: 0.6s; }
+  .mission-quotes blockquote:nth-child(5) { animation-delay: 0.8s; }
+  .mission-quotes blockquote:nth-child(6) { animation-delay: 1s; }
 
   .mission-quotes blockquote::before {
-    content: '»';
+    content: '“';
     color: #00ff88;
-    font-size: 1.5rem;
-    margin-right: 10px;
+    font-size: 3rem;
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    opacity: 0.3;
   }
 
-  .mission-quotes blockquote:nth-child(odd) {
-    animation-delay: 0.2s;
+  .mission-quotes blockquote::after {
+    content: '”';
+    color: #00ff88;
+    font-size: 3rem;
+    position: absolute;
+    right: -20px;
+    bottom: -20px;
+    opacity: 0.3;
   }
 
-  @keyframes glow {
-    0% { box-shadow: 0 0 30px rgba(0, 255, 136, 0.3); }
-    100% { box-shadow: 0 0 50px rgba(0, 255, 136, 0.6); }
+  @keyframes fade-in {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
   }
 
-  @keyframes text-glow {
-    0% { text-shadow: 0 0 5px rgba(0, 255, 136, 0.3); }
-    100% { text-shadow: 0 0 20px rgba(0, 255, 136, 0.6); }
-  }
-
-  @keyframes slide-in {
-    0% { transform: translateX(-30px); opacity: 0; }
-    100% { transform: translateX(0); opacity: 1; }
-  }
-
-  @keyframes rotate {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+  @keyframes line-grow {
+    0% { width: 0; }
+    100% { width: 60px; }
   }
 
   @media (max-width: 768px) {
-    .mission-quotes {
-      padding: 20px;
-      margin: 30px 0;
-    }
-    
     .mission-quotes h2 {
-      font-size: 2rem;
+      font-size: 1.8rem;
     }
     
     .mission-quotes blockquote {
-      font-size: 1.1rem;
-      padding: 10px 15px;
+      font-size: 1rem;
+      padding: 15px;
     }
   }
 </style>
 
 <div class="mission-quotes">
-  <h2>🚀 REFRESHO MISSION QUOTES ⚡</h2>
+  <h2>REFRESHO MISSION QUOTES</h2>
   
   <blockquote>"When you need to refresh the web, you need REFRESHO."</blockquote>
   <blockquote>"Hack the refresh. Own the web."</blockquote>
