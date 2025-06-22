@@ -540,6 +540,8 @@ graph TD
 
 ## 🚀 REFRESHO MISSION QUOTES ⚡
 
+[![View Animated Version](https://img.shields.io/badge/View-Animated_Version-blue?style=for-the-badge)](https://xenonesis.github.io/Refresho/mission-quotes.html)
+
 > **"When you need to refresh the web, you need REFRESHO."**
 > *The foundation of our mission*
 
