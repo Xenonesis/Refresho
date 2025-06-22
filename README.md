@@ -538,101 +538,23 @@ graph TD
 
 ---
 
-<style>
-  .mission-quotes {
-    background: #0a0a0a;
-    padding: 40px 20px;
-    margin: 50px 0;
-    text-align: center;
-  }
+## 🚀 REFRESHO MISSION QUOTES ⚡
 
-  .mission-quotes h2 {
-    color: #00ff88;
-    font-size: 2.2rem;
-    margin-bottom: 40px;
-    position: relative;
-    display: inline-block;
-  }
+> **"When you need to refresh the web, you need REFRESHO."**
+> *The foundation of our mission*
 
-  .mission-quotes h2::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    width: 60px;
-    height: 3px;
-    background: #00ff88;
-    transform: translateX(-50%);
-    animation: line-grow 0.8s ease-out;
-  }
+> **"Hack the refresh. Own the web."**
+> *Our approach to web automation*
 
-  .mission-quotes blockquote {
-    color: #fff;
-    font-size: 1.2rem;
-    margin: 25px auto;
-    max-width: 800px;
-    padding: 20px;
-    position: relative;
-    opacity: 0;
-    animation: fade-in 0.6s ease-out forwards;
-  }
+> **"One bot to refresh them all."**
+> *The power of our technology*
 
-  .mission-quotes blockquote:nth-child(2) { animation-delay: 0.2s; }
-  .mission-quotes blockquote:nth-child(3) { animation-delay: 0.4s; }
-  .mission-quotes blockquote:nth-child(4) { animation-delay: 0.6s; }
-  .mission-quotes blockquote:nth-child(5) { animation-delay: 0.8s; }
-  .mission-quotes blockquote:nth-child(6) { animation-delay: 1s; }
+> **"In the world of web, persistence is power."**
+> *Our core philosophy*
 
-  .mission-quotes blockquote::before {
-    content: '“';
-    color: #00ff88;
-    font-size: 3rem;
-    position: absolute;
-    left: -20px;
-    top: -20px;
-    opacity: 0.3;
-  }
+> **"REFRESHO: Because manual refresh is too mainstream."**
+> *Our modern solution*
 
-  .mission-quotes blockquote::after {
-    content: '”';
-    color: #00ff88;
-    font-size: 3rem;
-    position: absolute;
-    right: -20px;
-    bottom: -20px;
-    opacity: 0.3;
-  }
-
-  @keyframes fade-in {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
-  }
-
-  @keyframes line-grow {
-    0% { width: 0; }
-    100% { width: 60px; }
-  }
-
-  @media (max-width: 768px) {
-    .mission-quotes h2 {
-      font-size: 1.8rem;
-    }
-    
-    .mission-quotes blockquote {
-      font-size: 1rem;
-      padding: 15px;
-    }
-  }
-</style>
-
-<div class="mission-quotes">
-  <h2>REFRESHO MISSION QUOTES</h2>
-  
-  <blockquote>"When you need to refresh the web, you need REFRESHO."</blockquote>
-  <blockquote>"Hack the refresh. Own the web."</blockquote>
-  <blockquote>"One bot to refresh them all."</blockquote>
-  <blockquote>"In the world of web, persistence is power."</blockquote>
-  <blockquote>"REFRESHO: Because manual refresh is too mainstream."</blockquote>
-</div>
+**#HackTheWeb #RefreshThePlanet #CodeLikeABeast**
 
 **#HackTheWeb #RefreshThePlanet #CodeLikeABeast**
