@@ -1,17 +1,17 @@
 Developed by Addy@Xenonesis
 
-# 🔥 REFRESHO v3.0 - ULTIMATE WEB REFRESHER BEAST
+# 🔥 REFRESHO v4.0 - ULTIMATE WEB REFRESHER BEAST
 
 ```
-██████╗ ███████╗███████╗██████╗ ███████╗███████╗██╗  ██╗ ██████╗ 
+██████╗ ███████╗███████╗██████╗ ███████╗███████╗██╗  ██╗ ██████╗
 ██╔══██╗██╔════╝██╔════╝██╔══██╗██╔════╝██╔════╝██║  ██║██╔═══██╗
 ██████╔╝█████╗  █████╗  ██████╔╝█████╗  ███████╗███████║██║   ██║
 ██╔══██╗██╔══╝  ██╔══╝  ██╔══██╗██╔══╝  ╚════██║██╔══██║██║   ██║
 ██║  ██║███████╗██║     ██║  ██║███████╗███████║██║  ██║╚██████╔╝
-╚═╝  ╚═╝╚══════╝╚═╝     ╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝ ╚═════╝ 
+╚═╝  ╚═╝╚══════╝╚═╝     ╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝ ╚═════╝
 ```
 
-**🎯 The Most Advanced Web Refresher Tool Ever Created**  
+**🎯 The Most Advanced Web Refresher Tool Ever Created**
 **💀 Developed by Addy@Xenonesis**
 
 ---
@@ -44,6 +44,12 @@ Developed by Addy@Xenonesis
 - **History Tracking** - Detailed site analysis reports
 - **Error Recovery** - Automatic failure handling
 - **Performance Analytics** - Real-time speed metrics
+
+### 🛡️ **VAPT CAPABILITIES (Vulnerability Assessment & Penetration Testing)**
+- **Security Headers Analysis**: Checks for critical HTTP security headers (HSTS, CSP, X-Frame-Options, etc.)
+- **Sensitive File Detection**: Scans for exposed sensitive files and directories (.env, wp-config.php, admin panels, etc.)
+- **Basic Port Scanning**: Identifies open common ports on the target domain (80, 443, 22, 3306, etc.)
+- **Integrated Reporting**: VAPT results are integrated into the site analysis reports for comprehensive intelligence.
 
 ### 🔧 **TECHNICAL CAPABILITIES**
 - **Multi-threading Support** - Parallel processing
@@ -80,7 +86,7 @@ python refresh_bot.py
 - **Detection:** Nearly impossible
 - **Use Case:** Long-term monitoring
 
-### 💥 **ASSAULT MODE**  
+### 💥 **ASSAULT MODE**
 - **Range:** 1001-10000 refreshes
 - **Speed:** Balanced performance
 - **Detection:** Low risk
@@ -108,6 +114,7 @@ python refresh_bot.py
 ### 🔗 **Dynamic URL Management**
 - **Temporary URL Storage** - Save frequently used URLs with custom names
 - **Persistent Storage** - URLs saved between sessions in `saved_urls.json`
+- **Quick Access** - Select saved URLs from numbered menu
 - **Easy Management** - Add, delete, and organize URLs on the fly
 - **Custom Naming** - Give meaningful names to your saved URLs
 - **No Google Preset** - Removed static Google option for cleaner interface
@@ -121,7 +128,7 @@ python refresh_bot.py
 
 ### 🔧 **Advanced Features**
 - ✅ Proxy rotation
-- ✅ User agent rotation  
+- ✅ User agent rotation
 - ✅ Screenshot capture
 - ✅ Site intelligence analysis
 - ✅ Dynamic URL management
@@ -152,6 +159,7 @@ python refresh_bot.py
 ### 🌧️ **Matrix Rain**
 - Falling code animation
 - Customizable duration
+- Terminal width adaptation
 - Terminal width adaptation
 
 ### ⚡ **Glitch Effects**
@@ -374,11 +382,11 @@ python -m unittest test_refresh_bot.py -v
 ## 📁 PROJECT STRUCTURE
 
 ```
-refresho-v2/
+refresho-v4/
 ├── refresh_bot.py          # Main beast engine
-├── requirements.txt        # Power dependencies  
+├── requirements.txt        # Power dependencies
 ├── run_refresh_bot.bat    # Windows launcher
-├── test_refresh_bot.py    # Test arsenal
+├── test_refresh_bot.py    # Comprehensive test suite (VAPT and core functions)
 ├── README.md              # This documentation
 ├── screenshots/           # Captured intel
 ├── history/               # Site analysis reports
@@ -439,15 +447,15 @@ SOFTWARE.
 
 ## 🎉 CREDITS
 
-**🔥 Engineered by Addy@Xenonesis**  
-**💀 Built for the Elite**  
+**🔥 Engineered by Addy@Xenonesis**
+**💀 Built for the Elite**
 **⚡ Powered by Pure Code**
 
 ---
 
 ## 🚨 DISCLAIMER
 
-REFRESHO v3.0 is designed for legitimate testing and development purposes only. Users are responsible for complying with all applicable laws and website terms of service.
+REFRESHO v4.0 is designed for legitimate testing, development, and security assessment purposes only. Users are responsible for complying with all applicable laws and website terms of service. The VAPT features are intended for ethical hacking and security research on systems you have explicit permission to test.
 
 ---
 
@@ -467,7 +475,7 @@ REFRESHO v3.0 is designed for legitimate testing and development purposes only. 
       /        🚗         \
      /      JSON DB       \
     /         📦          \
-   ======================= 
+   =======================
    Built with Modern Tech
 ```
 

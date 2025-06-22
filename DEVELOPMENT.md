@@ -54,40 +54,40 @@ This guide covers everything you need to know to start developing REFRESHO.
 ### Core Components
 ```
 refresho/
-├── refresh_bot.py      # Main application logic
-├── url_manager.py      # URL handling and management
-├── browser_control.py  # Browser automation
-├── intelligence.py     # Site analysis
-└── utils/
-    ├── logger.py      # Logging utilities
-    ├── config.py      # Configuration management
-    └── helpers.py     # Helper functions
+├── refresh_bot.py          # Main application logic (includes URL management, browser control, site analysis, VAPT)
+├── requirements.txt        # Power dependencies
+├── run_refresh_bot.bat    # Windows launcher
+├── test_refresh_bot.py    # Comprehensive test suite (unittest)
+└── utils/                  # (Optional: for future standalone utilities)
+    ├── logger.py           # Logging utilities (if needed)
+    ├── config.py           # Configuration management (if needed)
+    └── helpers.py          # Helper functions (if needed)
 ```
 
 ### Key Classes and Their Responsibilities
 
-1. **RefreshBot**
-   - Main application controller
-   - Manages refresh operations
-   - Handles mode selection
-   - Coordinates other components
+1. **Main Functions (e.g., main, refresho_beast, get_advanced_config)**
+   - Application entry point and core workflow control
+   - Handles user interaction and configuration
+   - Orchestrates the use of other classes/functions
 
-2. **URLManager**
-   - URL validation and storage
-   - URL rotation and selection
-   - Persistence management
+2. **URLManager Class**
+   - Handles loading, saving, adding, and removing URLs
+   - Manages persistent storage of saved URLs
 
-3. **BrowserController**
-   - Browser initialization
-   - Page navigation
-   - Action execution
-   - Screenshot capture
+3. **SiteAnalyzer Class**
+   - Performs comprehensive site analysis (performance, content, tech, security)
+   - Displays and saves analysis reports
 
-4. **SiteIntelligence**
-   - Site analysis
-   - Performance metrics
-   - Content evaluation
-   - Security assessment
+4. **VAPTAnalyzer Class**
+   - Performs vulnerability assessment checks (headers, sensitive files, ports)
+   - Displays and saves VAPT results
+
+5. **HackerEffects Class**
+   - Provides visual effects for the terminal UI
+
+6. **SystemAnalyzer Class**
+   - Gathers system information
 
 ## Code Organization
 
@@ -163,32 +163,33 @@ class ComponentName:
 
 ## Testing
 
-### Test Structure
+### Test Structure (using unittest)
 ```python
-import pytest
-from refresho import ComponentName
+import unittest
+from unittest.mock import patch, MagicMock
+# Import classes/functions from refresh_bot to test
+from refresh_bot import URLManager, SiteAnalyzer, VAPTAnalyzer, create_chrome_driver
 
-def test_component_feature():
-    # Arrange
-    component = ComponentName("test")
+class TestComponentName(unittest.TestCase): # Example Test Class
+    """Test suite for ComponentName"""
 
-    # Act
-    result = component.method_name(["data"])
-
-    # Assert
-    assert result is True
+    def test_method_name(self):
+        """Test method_name functionality"""
+        # Arrange
+        # Mock dependencies if necessary
+        
+        # Act
+        # Call the method being tested
+        
+        # Assert
+        # Use assert methods to verify results
+        pass
 ```
 
 ### Running Tests
 ```bash
-# Run all tests
-pytest
-
-# Run specific test file
-pytest tests/test_component.py
-
-# Run with coverage
-pytest --cov=refresho tests/
+# Run the comprehensive test suite
+python -m unittest test_refresh_bot.py -v
 ```
 
 ## Debugging

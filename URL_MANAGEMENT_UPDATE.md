@@ -57,8 +57,11 @@ python manage_urls.py
 ### **New Files Added:**
 - `saved_urls.json` - Stores user's saved URLs
 - `manage_urls.py` - Standalone URL management utility
-- `test_url_manager.py` - Testing script for URL management
-- `demo_url_selection.py` - Demo of new URL selection
+
+### **Modified Files:**
+- `refresh_bot.py` - Added URLManager class and updated target selection
+- `README.md` - Updated documentation
+- `test_refresh_bot.py` - **New** comprehensive combined test suite (includes URL management tests)
 
 ### **Modified Files:**
 - `refresh_bot.py` - Added URLManager class and updated target selection
@@ -125,7 +128,7 @@ class URLManager:
 
 **🎉 Update Complete!**
 
-Your REFRESHO v3.0 now has a flexible, user-controlled URL management system instead of the static Google preset.
+Your REFRESHO v4.0 now has a flexible, user-controlled URL management system instead of the static Google preset.
 
 *Update implemented by Amazon Q Developer*  
 *Original tool by Addy@Xenonesis*

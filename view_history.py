@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-REFRESHO v3.0 - History Viewer
+REFRESHO v4.0 - History Viewer
 View saved site analysis reports
 """
 import os
@@ -55,13 +55,43 @@ def display_report(filename):
         if data['description']:
             print(f"\nDescription: {data['description']}")
         
+# Add VAPT Results display
+        if 'vapt_results' in data and data['vapt_results']:
+            vapt_results = data['vapt_results']
+            print(f"\n{'='*60}")
+            print(f"VAPT ANALYSIS RESULTS")
+            print(f"{'='*60}")
+
+            # Security Headers
+            print(f"\n[SECURITY HEADERS]")
+            if vapt_results.get('security_headers'):
+                for header, value in vapt_results['security_headers'].items():
+                    print(f"  • {header}: {value[:50]}{'...' if len(str(value)) > 50 else ''}")
+            else:
+                print(f"  No specific security headers found or could not retrieve.")
+
+            # Sensitive Files
+            print(f"\n[SENSITIVE FILES/DIRECTORIES]")
+            if vapt_results.get('sensitive_files'):
+                for file_path in vapt_results['sensitive_files']:
+                    print(f"  [!] Potentially found: {file_path}")
+            else:
+                print(f"  No common sensitive files/directories found.")
+
+            # Open Ports
+            print(f"\n[OPEN PORTS (BASIC SCAN)]")
+            if vapt_results.get('open_ports'):
+                for port in vapt_results['open_ports']:
+                    print(f"  [!] Port {port} is OPEN")
+            else:
+                print(f"  No common ports found open or scan skipped.")
         print(f"{'='*60}")
         
     except Exception as e:
         print(f"[ERROR] Failed to read report: {e}")
 
 def main():
-    print("REFRESHO v3.0 - Site Analysis History Viewer")
+    print("REFRESHO v4.0 - Site Analysis History Viewer")
     print("=" * 50)
     
     reports = list_reports()

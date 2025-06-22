@@ -105,14 +105,14 @@ ERROR: This package requires Python 3.9+
 **Solutions:**
 1. Optimize browser settings:
    ```python
+   # Example options (adjust as needed)
    browser_options = {
-       "disable_images": True,
-       "disable_javascript": True
+       "disable_images": True, # Can speed up loading
    }
    ```
 2. Use headless mode
 3. Reduce logging level
-4. Enable multi-threading
+4. Consider reducing the refresh count or increasing the delay
 
 ### High CPU Usage
 **Problem:** Application consuming excessive CPU
