@@ -486,24 +486,55 @@ REFRESHO v4.0 is designed for legitimate testing, development, and security asse
   <img src="rf.png" alt="Refresho Logo" width="200"/>
 </p>
 
-**Tech Stack:**
-```
-           🐍 PYTHON 🐍
-          /             \
-         /   SELENIUM    \
-        /       🌐        \
-       /  CHROMEDRIVER    \
-      /        🚗         \
-     /      JSON DB       \
-    /         📦          \
-   =======================
-   Built with Modern Tech
+### 🚀 Core Technologies
+
+<table>
+  <tr>
+    <td align="center" width="25%">
+      <img src="https://img.icons8.com/color/96/000000/python.png" alt="Python" width="48"/>
+      <br>
+      <strong>Python 🐍</strong>
+      <p>Core programming language powering the application logic</p>
+    </td>
+    <td align="center" width="25%">
+      <img src="https://img.icons8.com/color/96/000000/selenium-test-automation.png" alt="Selenium" width="48"/>
+      <br>
+      <strong>Selenium 🌐</strong>
+      <p>Browser automation engine supporting multiple browsers</p>
+    </td>
+    <td align="center" width="25%">
+      <img src="https://img.icons8.com/color/96/000000/chrome.png" alt="Chromedriver" width="48"/>
+      <br>
+      <strong>Chromedriver 🚗</strong>
+      <p>Chrome-specific WebDriver for precise browser control</p>
+    </td>
+    <td align="center" width="25%">
+      <img src="https://img.icons8.com/color/96/000000/json.png" alt="JSON" width="48"/>
+      <br>
+      <strong>JSON 📦</strong>
+      <p>Efficient data storage and URL management system</p>
+    </td>
+  </tr>
+</table>
+
+### 🔗 Technology Stack Diagram
+
+```mermaid
+graph TD
+    A[Python 🐍] --> B[Selenium 🌐]
+    B --> C[Chromedriver 🚗]
+    C --> D[JSON 📦]
+    style A fill:#3572A5,color:#fff
+    style B fill:#43B02A,color:#fff
+    style C fill:#F7C52F,color:#000
+    style D fill:#F16529,color:#fff
 ```
 
-- **Python:** Core programming language powering the application logic
-- **Selenium WebDriver:** Browser automation engine supporting multiple browsers
-- **Chromedriver:** Chrome-specific WebDriver for precise browser control
-- **JSON:** Efficient data storage and URL management system
+### 🛠️ Key Features
+- **Python:** Advanced automation scripts and logic
+- **Selenium:** Cross-browser compatibility
+- **Chromedriver:** Precise browser control
+- **JSON:** Lightweight data storage
 
 ---
 
