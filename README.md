@@ -479,14 +479,13 @@ REFRESHO v3.0 is designed for legitimate testing and development purposes only. 
 ---
 
 ╔══════════════════════════════════════════════════════════════════╗
-║                     [REFRESHO MISSION QUOTES]                     ║
-║--------------------------------------------------------------    ║
-║ > "When you need to refresh the web, you need REFRESHO." 🚀      ║
-║ > "Hack the refresh. Own the web." 💀                           ║
-║ > "One bot to refresh them all." ⚡                              ║
-║ > "In the world of web, persistence is power." 🔥               ║
-║ > "REFRESHO: Because manual refresh is too mainstream." 🌐       ║
-╚═════════════════════════════════════════════════════════════════╝
-
+║                      REFRESHO MISSION QUOTES                      ║
+╠══════════════════════════════════════════════════════════════════╣
+║  > "When you need to refresh the web, you need REFRESHO."  🚀    ║
+║  > "Hack the refresh. Own the web."  💀                          ║
+║  > "One bot to refresh them all."  ⚡                            ║
+║  > "In the world of web, persistence is power."  🔥              ║
+║  > "REFRESHO: Because manual refresh is too mainstream."  🌐     ║
+╚══════════════════════════════════════════════════════════════════╝
 
 **#HackTheWeb #RefreshThePlanet #CodeLikeABeast**
