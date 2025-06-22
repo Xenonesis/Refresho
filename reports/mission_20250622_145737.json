@@ -1,10 +1,10 @@
 {
-  "timestamp": "2025-06-22 13:49:18",
+  "timestamp": "2025-06-22 14:57:37",
   "target": "https://github.com/Xenonesis",
   "mode": "STEALTH",
   "refresh_count": 1,
-  "execution_time": 6.63929557800293,
-  "rate": 0.15061838838944952,
+  "execution_time": 6.646769285202026,
+  "rate": 0.15044903126490952,
   "config": {
     "url": "https://github.com/Xenonesis",
     "mode": "STEALTH",
@@ -15,7 +15,7 @@
     "vapt_enabled": true,
     "proxy_rotation": true,
     "user_agent_rotation": true,
-    "screenshot_capture": false,
+    "screenshot_capture": true,
     "site_intelligence": true
   }
 }

@@ -284,10 +284,341 @@ class VAPTAnalyzer:
             'Cross-Origin-Embedder-Policy': headers.get('Cross-Origin-Embedder-Policy'),
             'Cross-Origin-Opener-Policy': headers.get('Cross-Origin-Opener-Policy'),
             'Cross-Origin-Resource-Policy': headers.get('Cross-Origin-Resource-Policy'),
-            'Feature-Policy': headers.get('Feature-Policy') # Older name for Permissions-Policy
+            'Feature-Policy': headers.get('Feature-Policy'), # Older name for Permissions-Policy
+            'X-XSS-Protection': headers.get('X-XSS-Protection'),
+            'Server': headers.get('Server'),
+            'X-Powered-By': headers.get('X-Powered-By')
         }
         # Filter out None values
         return {k: v for k, v in security_headers.items() if v is not None}
+
+    @staticmethod
+    def test_sql_injection(url):
+        """Test for SQL injection vulnerabilities"""
+        print(f"\033[96m[VAPT] Testing SQL injection vulnerabilities...\033[0m")
+        vulnerabilities = []
+        
+        # Common SQL injection payloads
+        sql_payloads = [
+            "' OR '1'='1",
+            "' OR 1=1--",
+            "' UNION SELECT NULL--",
+            "'; DROP TABLE users--",
+            "' OR 'x'='x",
+            "1' OR '1'='1' #",
+            "admin'--",
+            "' OR 1=1/*"
+        ]
+        
+        # Test common parameters
+        test_params = ['id', 'user', 'username', 'search', 'q', 'name', 'email']
+        
+        for param in test_params:
+            for payload in sql_payloads:
+                try:
+                    test_url = f"{url}?{param}={payload}"
+                    response = requests.get(test_url, timeout=5)
+                    
+                    # Check for SQL error patterns
+                    error_patterns = [
+                        'sql syntax',
+                        'mysql_fetch',
+                        'ora-',
+                        'microsoft ole db',
+                        'sqlite_',
+                        'postgresql',
+                        'warning: mysql',
+                        'valid mysql result',
+                        'mysqlclient',
+                        'sql server'
+                    ]
+                    
+                    response_text = response.text.lower()
+                    for pattern in error_patterns:
+                        if pattern in response_text:
+                            vulnerabilities.append({
+                                'parameter': param,
+                                'payload': payload,
+                                'pattern': pattern,
+                                'url': test_url
+                            })
+                            break
+                            
+                except requests.exceptions.RequestException:
+                    continue
+                    
+        return vulnerabilities
+
+    @staticmethod
+    def test_xss_vulnerabilities(url):
+        """Test for XSS vulnerabilities"""
+        print(f"\033[96m[VAPT] Testing XSS vulnerabilities...\033[0m")
+        vulnerabilities = []
+        
+        # XSS payloads
+        xss_payloads = [
+            "<script>alert('XSS')</script>",
+            "<img src=x onerror=alert('XSS')>",
+            "<svg onload=alert('XSS')>",
+            "javascript:alert('XSS')",
+            "<iframe src=javascript:alert('XSS')>",
+            "'><script>alert('XSS')</script>",
+            "\"><script>alert('XSS')</script>",
+            "<body onload=alert('XSS')>"
+        ]
+        
+        test_params = ['search', 'q', 'name', 'comment', 'message', 'input']
+        
+        for param in test_params:
+            for payload in xss_payloads:
+                try:
+                    test_url = f"{url}?{param}={payload}"
+                    response = requests.get(test_url, timeout=5)
+                    
+                    if payload in response.text:
+                        vulnerabilities.append({
+                            'parameter': param,
+                            'payload': payload,
+                            'url': test_url,
+                            'type': 'Reflected XSS'
+                        })
+                        
+                except requests.exceptions.RequestException:
+                    continue
+                    
+        return vulnerabilities
+
+    @staticmethod
+    def test_directory_traversal(url):
+        """Test for directory traversal vulnerabilities"""
+        print(f"\033[96m[VAPT] Testing directory traversal vulnerabilities...\033[0m")
+        vulnerabilities = []
+        base_url = urlparse(url).scheme + "://" + urlparse(url).netloc
+        
+        # Directory traversal payloads
+        traversal_payloads = [
+            "../../etc/passwd",
+            "../../../windows/system32/drivers/etc/hosts",
+            "..\\..\\..\\windows\\system32\\drivers\\etc\\hosts",
+            "....//....//....//etc/passwd",
+            "%2e%2e%2f%2e%2e%2f%2e%2e%2fetc%2fpasswd",
+            "..%252f..%252f..%252fetc%252fpasswd",
+            "..%5c..%5c..%5cwindows%5csystem32%5cdrivers%5cetc%5chosts"
+        ]
+        
+        test_params = ['file', 'page', 'include', 'path', 'doc', 'document']
+        
+        for param in test_params:
+            for payload in traversal_payloads:
+                try:
+                    test_url = f"{base_url}?{param}={payload}"
+                    response = requests.get(test_url, timeout=5)
+                    
+                    # Check for system file patterns
+                    if any(pattern in response.text.lower() for pattern in [
+                        'root:x:', 'daemon:', '/bin/bash', '# localhost', 'microsoft tcp/ip'
+                    ]):
+                        vulnerabilities.append({
+                            'parameter': param,
+                            'payload': payload,
+                            'url': test_url
+                        })
+                        
+                except requests.exceptions.RequestException:
+                    continue
+                    
+        return vulnerabilities
+
+    @staticmethod
+    def analyze_ssl_tls(url):
+        """Analyze SSL/TLS configuration"""
+        print(f"\033[96m[VAPT] Analyzing SSL/TLS configuration...\033[0m")
+        ssl_info = {}
+        
+        if not url.startswith('https://'):
+            return {'error': 'URL does not use HTTPS'}
+            
+        try:
+            import ssl
+            import socket
+            from urllib.parse import urlparse
+            
+            parsed_url = urlparse(url)
+            hostname = parsed_url.netloc
+            port = 443
+            
+            # Create SSL context
+            context = ssl.create_default_context()
+            
+            # Connect and get certificate
+            with socket.create_connection((hostname, port), timeout=10) as sock:
+                with context.wrap_socket(sock, server_hostname=hostname) as ssock:
+                    cert = ssock.getpeercert()
+                    cipher = ssock.cipher()
+                    version = ssock.version()
+                    
+                    ssl_info = {
+                        'version': version,
+                        'cipher': cipher,
+                        'subject': dict(x[0] for x in cert['subject']),
+                        'issuer': dict(x[0] for x in cert['issuer']),
+                        'serial_number': cert['serialNumber'],
+                        'not_before': cert['notBefore'],
+                        'not_after': cert['notAfter'],
+                        'san': cert.get('subjectAltName', [])
+                    }
+                    
+        except Exception as e:
+            ssl_info = {'error': str(e)}
+            
+        return ssl_info
+
+    @staticmethod
+    def enumerate_subdomains(domain):
+        """Basic subdomain enumeration"""
+        print(f"\033[96m[VAPT] Enumerating subdomains for {domain}...\033[0m")
+        subdomains = []
+        
+        # Common subdomain prefixes
+        common_subs = [
+            'www', 'mail', 'ftp', 'admin', 'test', 'dev', 'staging', 'api',
+            'blog', 'shop', 'store', 'secure', 'login', 'portal', 'support',
+            'help', 'docs', 'cdn', 'static', 'img', 'images', 'media',
+            'assets', 'css', 'js', 'app', 'mobile', 'm', 'beta', 'alpha'
+        ]
+        
+        for sub in common_subs:
+            subdomain = f"{sub}.{domain}"
+            try:
+                import socket
+                socket.gethostbyname(subdomain)
+                subdomains.append(subdomain)
+                print(f"\033[92m[VAPT] Found subdomain: {subdomain}\033[0m")
+            except socket.gaierror:
+                continue
+            except Exception:
+                continue
+                
+        return subdomains
+
+    @staticmethod
+    def analyze_cookies(driver):
+        """Analyze cookie security"""
+        print(f"\033[96m[VAPT] Analyzing cookie security...\033[0m")
+        cookie_analysis = []
+        
+        try:
+            cookies = driver.get_cookies()
+            for cookie in cookies:
+                analysis = {
+                    'name': cookie['name'],
+                    'domain': cookie['domain'],
+                    'path': cookie.get('path', '/'),
+                    'secure': cookie.get('secure', False),
+                    'httpOnly': cookie.get('httpOnly', False),
+                    'sameSite': cookie.get('sameSite', 'None'),
+                    'value_length': len(cookie['value']),
+                    'issues': []
+                }
+                
+                # Check for security issues
+                if not analysis['secure']:
+                    analysis['issues'].append('Cookie not marked as Secure')
+                if not analysis['httpOnly']:
+                    analysis['issues'].append('Cookie not marked as HttpOnly')
+                if analysis['sameSite'] == 'None':
+                    analysis['issues'].append('Cookie SameSite attribute not set')
+                if len(cookie['value']) > 4096:
+                    analysis['issues'].append('Cookie value exceeds recommended size')
+                    
+                cookie_analysis.append(analysis)
+                
+        except Exception as e:
+            return {'error': str(e)}
+            
+        return cookie_analysis
+
+    @staticmethod
+    def test_csrf_protection(url, driver):
+        """Test for CSRF protection"""
+        print(f"\033[96m[VAPT] Testing CSRF protection...\033[0m")
+        csrf_analysis = {'has_protection': False, 'tokens_found': [], 'forms_analyzed': 0}
+        
+        try:
+            forms = driver.find_elements(By.TAG_NAME, 'form')
+            csrf_analysis['forms_analyzed'] = len(forms)
+            
+            for form in forms:
+                # Look for CSRF tokens
+                csrf_inputs = form.find_elements(By.XPATH, ".//input[contains(@name, 'csrf') or contains(@name, 'token') or contains(@name, '_token')]")
+                
+                for inp in csrf_inputs:
+                    token_name = inp.get_attribute('name')
+                    token_value = inp.get_attribute('value')
+                    if token_value:
+                        csrf_analysis['tokens_found'].append({
+                            'name': token_name,
+                            'value_length': len(token_value)
+                        })
+                        csrf_analysis['has_protection'] = True
+                        
+        except Exception as e:
+            csrf_analysis['error'] = str(e)
+            
+        return csrf_analysis
+
+    @staticmethod
+    def detect_waf(url):
+        """Detect Web Application Firewall"""
+        print(f"\033[96m[VAPT] Detecting Web Application Firewall...\033[0m")
+        waf_signatures = {
+            'Cloudflare': ['cf-ray', 'cloudflare', '__cfduid'],
+            'AWS WAF': ['x-amzn-requestid', 'x-amz-cf-id'],
+            'Incapsula': ['x-iinfo', 'incap_ses'],
+            'ModSecurity': ['mod_security', 'modsecurity'],
+            'F5 BIG-IP': ['f5-login-page', 'bigipserver'],
+            'Barracuda': ['barra', 'cuda'],
+            'Sucuri': ['x-sucuri-id', 'sucuri'],
+            'Akamai': ['akamai', 'x-akamai']
+        }
+        
+        detected_wafs = []
+        
+        try:
+            response = requests.get(url, timeout=10)
+            headers = response.headers
+            content = response.text.lower()
+            
+            for waf_name, signatures in waf_signatures.items():
+                for sig in signatures:
+                    if any(sig in str(headers).lower() for sig in signatures) or any(sig in content for sig in signatures):
+                        detected_wafs.append(waf_name)
+                        break
+                        
+        except requests.exceptions.RequestException:
+            pass
+            
+        return detected_wafs
+
+    @staticmethod
+    def check_http_methods(url):
+        """Check allowed HTTP methods"""
+        print(f"\033[96m[VAPT] Testing HTTP methods...\033[0m")
+        methods = ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'HEAD', 'PATCH', 'TRACE', 'CONNECT']
+        allowed_methods = []
+        
+        for method in methods:
+            try:
+                response = requests.request(method, url, timeout=5)
+                if response.status_code not in [405, 501]:  # Method Not Allowed, Not Implemented
+                    allowed_methods.append({
+                        'method': method,
+                        'status_code': response.status_code
+                    })
+            except requests.exceptions.RequestException:
+                continue
+                
+        return allowed_methods
 
     @staticmethod
     def check_sensitive_files(url):
@@ -363,7 +694,7 @@ class VAPTAnalyzer:
     def perform_vapt_checks(url, driver):
         """Perform all VAPT checks"""
         vapt_results = {}
-        print(f"\n\033[96m[VAPT] Starting VAPT analysis for {url}...\033[0m")
+        print(f"\n\033[96m[VAPT] Starting comprehensive VAPT analysis for {url}...\033[0m")
 
         # Security Headers
         print(f"\033[96m[VAPT] Checking security headers...\033[0m")
@@ -376,12 +707,39 @@ class VAPTAnalyzer:
         print(f"\033[92m[VAPT] Sensitive files check complete.\033[0m")
 
         # Port Scan
-        # Note: Port scan doesn't require the selenium driver, only the URL
         print(f"\033[96m[VAPT] Performing basic port scan...\033[0m")
         vapt_results['open_ports'] = VAPTAnalyzer.scan_ports(url)
         print(f"\033[92m[VAPT] Basic port scan complete.\033[0m")
 
-        print(f"\033[96m[VAPT] VAPT analysis finished.\033[0m")
+        # SQL Injection Testing
+        vapt_results['sql_injection'] = VAPTAnalyzer.test_sql_injection(url)
+
+        # XSS Testing
+        vapt_results['xss_vulnerabilities'] = VAPTAnalyzer.test_xss_vulnerabilities(url)
+
+        # Directory Traversal Testing
+        vapt_results['directory_traversal'] = VAPTAnalyzer.test_directory_traversal(url)
+
+        # SSL/TLS Analysis
+        vapt_results['ssl_analysis'] = VAPTAnalyzer.analyze_ssl_tls(url)
+
+        # Subdomain Enumeration
+        domain = urlparse(url).netloc
+        vapt_results['subdomains'] = VAPTAnalyzer.enumerate_subdomains(domain)
+
+        # Cookie Analysis
+        vapt_results['cookie_analysis'] = VAPTAnalyzer.analyze_cookies(driver)
+
+        # CSRF Protection Testing
+        vapt_results['csrf_protection'] = VAPTAnalyzer.test_csrf_protection(url, driver)
+
+        # WAF Detection
+        vapt_results['waf_detection'] = VAPTAnalyzer.detect_waf(url)
+
+        # HTTP Methods Testing
+        vapt_results['http_methods'] = VAPTAnalyzer.check_http_methods(url)
+
+        print(f"\033[96m[VAPT] Comprehensive VAPT analysis finished.\033[0m")
         return vapt_results
 
     @staticmethod
@@ -395,9 +753,96 @@ class VAPTAnalyzer:
         print(f"\033[96m[SECURITY HEADERS]\033[0m")
         if vapt_results.get('security_headers'):
             for header, value in vapt_results['security_headers'].items():
-                print(f"\033[92m  • {header}: {value}\033[0m")
+                truncated_value = value[:100] + "..." if len(value) > 100 else value
+                print(f"\033[92m  • {header}: {truncated_value}\033[0m")
         else:
             print(f"\033[93m  No specific security headers found or could not retrieve.\033[0m")
+
+        # WAF Detection
+        print(f"\n\033[96m[WEB APPLICATION FIREWALL]\033[0m")
+        if vapt_results.get('waf_detection'):
+            for waf in vapt_results['waf_detection']:
+                print(f"\033[91m  [!] Detected: {waf}\033[0m")
+        else:
+            print(f"\033[92m  No WAF detected.\033[0m")
+
+        # SSL/TLS Analysis
+        print(f"\n\033[96m[SSL/TLS ANALYSIS]\033[0m")
+        ssl_info = vapt_results.get('ssl_analysis', {})
+        if ssl_info.get('error'):
+            print(f"\033[93m  {ssl_info['error']}\033[0m")
+        elif ssl_info:
+            print(f"\033[92m  • Version: {ssl_info.get('version', 'Unknown')}\033[0m")
+            if ssl_info.get('cipher'):
+                print(f"\033[92m  • Cipher: {ssl_info['cipher'][0]} ({ssl_info['cipher'][1]} bits)\033[0m")
+            if ssl_info.get('subject'):
+                print(f"\033[92m  • Subject: {ssl_info['subject'].get('commonName', 'Unknown')}\033[0m")
+            if ssl_info.get('issuer'):
+                print(f"\033[92m  • Issuer: {ssl_info['issuer'].get('commonName', 'Unknown')}\033[0m")
+
+        # SQL Injection Vulnerabilities
+        print(f"\n\033[96m[SQL INJECTION VULNERABILITIES]\033[0m")
+        if vapt_results.get('sql_injection'):
+            for vuln in vapt_results['sql_injection']:
+                print(f"\033[91m  [!] Parameter: {vuln['parameter']} | Pattern: {vuln['pattern']}\033[0m")
+        else:
+            print(f"\033[92m  No SQL injection vulnerabilities detected.\033[0m")
+
+        # XSS Vulnerabilities
+        print(f"\n\033[96m[XSS VULNERABILITIES]\033[0m")
+        if vapt_results.get('xss_vulnerabilities'):
+            for vuln in vapt_results['xss_vulnerabilities']:
+                print(f"\033[91m  [!] {vuln['type']} in parameter: {vuln['parameter']}\033[0m")
+        else:
+            print(f"\033[92m  No XSS vulnerabilities detected.\033[0m")
+
+        # Directory Traversal
+        print(f"\n\033[96m[DIRECTORY TRAVERSAL]\033[0m")
+        if vapt_results.get('directory_traversal'):
+            for vuln in vapt_results['directory_traversal']:
+                print(f"\033[91m  [!] Parameter: {vuln['parameter']} | Payload: {vuln['payload']}\033[0m")
+        else:
+            print(f"\033[92m  No directory traversal vulnerabilities detected.\033[0m")
+
+        # HTTP Methods
+        print(f"\n\033[96m[HTTP METHODS]\033[0m")
+        if vapt_results.get('http_methods'):
+            for method in vapt_results['http_methods']:
+                color = "\033[91m" if method['method'] in ['PUT', 'DELETE', 'TRACE'] else "\033[92m"
+                print(f"{color}  • {method['method']}: {method['status_code']}\033[0m")
+        else:
+            print(f"\033[93m  Could not determine allowed HTTP methods.\033[0m")
+
+        # Cookie Analysis
+        print(f"\n\033[96m[COOKIE SECURITY ANALYSIS]\033[0m")
+        if vapt_results.get('cookie_analysis'):
+            if isinstance(vapt_results['cookie_analysis'], list):
+                for cookie in vapt_results['cookie_analysis']:
+                    issues = cookie.get('issues', [])
+                    if issues:
+                        print(f"\033[91m  [!] {cookie['name']}: {', '.join(issues)}\033[0m")
+                    else:
+                        print(f"\033[92m  • {cookie['name']}: Secure configuration\033[0m")
+            else:
+                print(f"\033[93m  Error analyzing cookies: {vapt_results['cookie_analysis'].get('error', 'Unknown')}\033[0m")
+        else:
+            print(f"\033[93m  No cookies found to analyze.\033[0m")
+
+        # CSRF Protection
+        print(f"\n\033[96m[CSRF PROTECTION]\033[0m")
+        csrf_info = vapt_results.get('csrf_protection', {})
+        if csrf_info.get('has_protection'):
+            print(f"\033[92m  • CSRF protection detected ({len(csrf_info.get('tokens_found', []))} tokens)\033[0m")
+        else:
+            print(f"\033[91m  [!] No CSRF protection detected ({csrf_info.get('forms_analyzed', 0)} forms analyzed)\033[0m")
+
+        # Subdomains
+        print(f"\n\033[96m[SUBDOMAIN ENUMERATION]\033[0m")
+        if vapt_results.get('subdomains'):
+            for subdomain in vapt_results['subdomains']:
+                print(f"\033[92m  • Found: {subdomain}\033[0m")
+        else:
+            print(f"\033[93m  No subdomains discovered.\033[0m")
 
         # Sensitive Files
         print(f"\n\033[96m[SENSITIVE FILES/DIRECTORIES]\033[0m")
@@ -411,7 +856,13 @@ class VAPTAnalyzer:
         print(f"\n\033[96m[OPEN PORTS (BASIC SCAN)]\033[0m")
         if vapt_results.get('open_ports'):
             for port in vapt_results['open_ports']:
-                print(f"\033[91m  [!] Port {port} is OPEN\033[0m")
+                service_info = {
+                    22: "SSH", 80: "HTTP", 443: "HTTPS", 21: "FTP",
+                    23: "Telnet", 25: "SMTP", 110: "POP3", 143: "IMAP",
+                    3306: "MySQL", 5432: "PostgreSQL", 6379: "Redis", 27017: "MongoDB"
+                }
+                service = service_info.get(port, "Unknown")
+                print(f"\033[91m  [!] Port {port} ({service}) is OPEN\033[0m")
         else:
             print(f"\033[92m  No common ports found open or scan skipped.\033[0m")
 

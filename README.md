@@ -1,6 +1,4 @@
-Developed by Addy@Xenonesis
-
-# 🔥 REFRESHO v4.0 - ULTIMATE WEB REFRESHER BEAST
+# 🔥 REFRESHO v4.0 - ULTIMATE WEB REFRESHER & VAPT TOOLKIT
 
 ```
 ██████╗ ███████╗███████╗██████╗ ███████╗███████╗██╗  ██╗ ██████╗
@@ -11,69 +9,136 @@ Developed by Addy@Xenonesis
 ╚═╝  ╚═╝╚══════╝╚═╝     ╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝ ╚═════╝
 ```
 
-**🎯 The Most Advanced Web Refresher Tool Ever Created**
+**🎯 The Most Advanced Web Refresher & Cybersecurity Assessment Tool**  
 **💀 Developed by Addy@Xenonesis**
 
 ---
 
-## 🚀 BEAST MODE FEATURES
+## 🚀 ENHANCED FEATURES v4.0
 
-### 🔥 **HACKER EFFECTS**
+### 🔥 **CORE CAPABILITIES**
 - **Matrix Rain Animation** - Real-time falling code effect
-- **Glitch Text Effects** - Dynamic text corruption
-- **Typing Animations** - Realistic terminal typing
-- **System Monitoring** - Live CPU, RAM, Disk usage
-- **Session Tracking** - Unique session IDs and timestamps
+- **Intelligent Refresh Modes** - Stealth, Assault, and Nuclear modes
+- **Advanced Browser Control** - Ghost, Phantom, and Visible configurations
+- **Site Intelligence System** - Comprehensive target reconnaissance
+- **URL Management** - Dynamic URL storage and organization
+- **Performance Analytics** - Real-time metrics and reporting
+
+### 🛡️ **COMPREHENSIVE VAPT TOOLKIT** ⭐ NEW ⭐
+- **SQL Injection Testing** - 8 different payload patterns
+- **XSS Vulnerability Testing** - Reflected XSS detection
+- **Directory Traversal Testing** - Path traversal vulnerability checks
+- **SSL/TLS Security Analysis** - Certificate and encryption assessment
+- **Subdomain Enumeration** - DNS-based subdomain discovery
+- **Cookie Security Analysis** - HttpOnly, Secure, SameSite validation
+- **CSRF Protection Testing** - Token implementation verification
+- **WAF Detection** - Identifies 8 major Web Application Firewalls
+- **HTTP Methods Testing** - Dangerous method identification
+- **Security Headers Analysis** - 13 critical security headers
 
 ### ⚡ **INTELLIGENT MODES**
-- **🥷 STEALTH MODE** - 1-1000 refreshes (High delay, undetectable)
-- **💥 ASSAULT MODE** - 1001-10000 refreshes (Medium speed)
+- **🥷 STEALTH MODE** - 1-1000 refreshes (Undetectable)
+- **💥 ASSAULT MODE** - 1001-10000 refreshes (Balanced)
 - **☢️ NUCLEAR MODE** - 10001-9999999 refreshes (Maximum power)
-
-### 🛡️ **ADVANCED BROWSER CONFIGURATIONS**
-- **👻 Ghost Mode** - Headless + Anti-detection
-- **👤 Phantom Mode** - Headless + Speed optimized
-- **👁️ Visible Mode** - GUI + Debug capabilities
-
-### 🎯 **INTELLIGENT FEATURES**
-- **Auto-Delay Calculation** - Smart timing based on mode
-- **User Agent Rotation** - Dynamic browser fingerprinting
-- **Proxy Support** - Network anonymization
-- **Screenshot Capture** - Visual intelligence gathering
-- **Site Intelligence Analysis** - Comprehensive target reconnaissance
-- **History Tracking** - Detailed site analysis reports
-- **Error Recovery** - Automatic failure handling
-- **Performance Analytics** - Real-time speed metrics
-
-### 🛡️ **VAPT CAPABILITIES (Vulnerability Assessment & Penetration Testing)**
-- **Security Headers Analysis**: Checks for critical HTTP security headers (HSTS, CSP, X-Frame-Options, etc.)
-- **Sensitive File Detection**: Scans for exposed sensitive files and directories (.env, wp-config.php, admin panels, etc.)
-- **Basic Port Scanning**: Identifies open common ports on the target domain (80, 443, 22, 3306, etc.)
-- **Integrated Reporting**: VAPT results are integrated into the site analysis reports for comprehensive intelligence.
-
-### 🔧 **TECHNICAL CAPABILITIES**
-- **Multi-threading Support** - Parallel processing
-- **Memory Optimization** - Efficient resource usage
-- **Network Monitoring** - Connection tracking
-- **System Integration** - Deep OS interaction
-- **Stealth Evasion** - Anti-bot detection
 
 ---
 
 ## 🎮 QUICK START
 
-### 🖱️ **One-Click Launch (Windows)**
+### 🖱️ **Simple Launch**
 ```bash
-# Double-click run_refresh_bot.bat
-# Automatic setup + launch
+python src/refresh_bot.py
 ```
 
-### ⌨️ **Manual Launch**
+### 📦 **Installation**
 ```bash
 git clone https://github.com/Xenonesis/Refresho.git
 cd refresho
 pip install -r requirements.txt
-python refresh_bot.py
+python src/refresh_bot.py
+```
+
+---
+
+## 🛡️ VAPT ANALYSIS CAPABILITIES
+
+### 🔍 **Comprehensive Security Testing**
+
+#### **SQL Injection Detection**
+- Tests 8 different SQL injection payloads
+- Checks common parameters: id, user, username, search, q, name, email
+- Detects SQL error patterns in responses
+- Identifies potential database vulnerabilities
+
+#### **Cross-Site Scripting (XSS)**
+- Tests 8 XSS vectors for reflected vulnerabilities
+- Payload examples: `<script>alert('XSS')</script>`, `<img src=x onerror=alert('XSS')>`
+- Checks parameters: search, q, name, comment, message, input
+- Identifies unfiltered user input
+
+#### **Directory Traversal**
+- Tests 7 path traversal patterns
+- Payloads: `../../etc/passwd`, URL-encoded variants
+- Checks parameters: file, page, include, path, doc, document
+- Detects file inclusion vulnerabilities
+
+#### **SSL/TLS Analysis**
+- Certificate validation and details
+- Cipher suite assessment
+- Protocol version analysis
+- Subject Alternative Names (SAN) verification
+
+#### **Security Headers Assessment**
+- Checks 13 critical security headers
+- HSTS, CSP, X-Frame-Options validation
+- Server information disclosure detection
+- Security posture evaluation
+
+### 📊 **VAPT Report Example**
+```
++==============================================================+
+|                      VAPT ANALYSIS REPORT                    |
++==============================================================+
+
+[SECURITY HEADERS]
+  • Strict-Transport-Security: max-age=31536000
+  • Content-Security-Policy: default-src 'self'
+  • X-Frame-Options: DENY
+
+[SQL INJECTION VULNERABILITIES]
+  No SQL injection vulnerabilities detected.
+
+[XSS VULNERABILITIES]
+  No XSS vulnerabilities detected.
+
+[COOKIE SECURITY ANALYSIS]
+  [!] sessionid: Cookie not marked as Secure
+  • auth_token: Secure configuration
+
+[OPEN PORTS (BASIC SCAN)]
+  [!] Port 80 (HTTP) is OPEN
+  [!] Port 443 (HTTPS) is OPEN
+  [!] Port 22 (SSH) is OPEN
++==============================================================+
+```
+
+---
+
+## 📁 PROJECT STRUCTURE (CLEANED)
+
+```
+.
+├── src/
+│   └── refresh_bot.py          # Main application
+├── docs/
+│   └── VAPT_ENHANCED_FEATURES.md
+├── assets/
+│   └── rf.png
+├── history/                    # Site analysis reports
+├── reports/                    # Mission reports
+├── saved_urls/                 # URL storage
+├── requirements.txt
+└── README.md
 ```
 
 ---
@@ -82,42 +147,22 @@ python refresh_bot.py
 
 ### 🥷 **STEALTH MODE**
 - **Range:** 1-1000 refreshes
-- **Speed:** Slow and steady
 - **Detection:** Nearly impossible
-- **Use Case:** Long-term monitoring
+- **Use Case:** Long-term monitoring, VAPT analysis
 
 ### 💥 **ASSAULT MODE**
 - **Range:** 1001-10000 refreshes
-- **Speed:** Balanced performance
 - **Detection:** Low risk
-- **Use Case:** Stress testing
+- **Use Case:** Stress testing with security analysis
 
 ### ☢️ **NUCLEAR MODE**
 - **Range:** 10001-9999999 refreshes
-- **Speed:** Maximum velocity
 - **Detection:** High intensity
-- **Use Case:** Ultimate power testing
+- **Use Case:** Maximum performance testing
 
 ---
 
-## 🛠️ ADVANCED CONFIGURATION
-
-### 🎯 **Target Selection**
-```
-[1] Default: https://github.com/Xenonesis
-[2] Stack Overflow: https://stackoverflow.com
-[3] Reddit: https://reddit.com
-[4] Custom URL
-[5] Manage saved URLs
-```
-
-### 🔗 **Dynamic URL Management**
-- **Temporary URL Storage** - Save frequently used URLs with custom names
-- **Persistent Storage** - URLs saved between sessions in `saved_urls.json`
-- **Quick Access** - Select saved URLs from numbered menu
-- **Easy Management** - Add, delete, and organize URLs on the fly
-- **Custom Naming** - Give meaningful names to your saved URLs
-- **No Google Preset** - Removed static Google option for cleaner interface
+## 🔧 ADVANCED CONFIGURATION
 
 ### 🌐 **Browser Modes**
 ```
@@ -126,443 +171,137 @@ python refresh_bot.py
 [3] Visible Mode (GUI + Debug)
 ```
 
+### 🛡️ **Security Features**
+```
+[SECURITY] Enable VAPT (Vulnerability Assessment) mode?
+[1] Yes - Include comprehensive security analysis
+[2] No - Standard refresh only
+```
+
 ### 🔧 **Advanced Features**
 - ✅ Proxy rotation
 - ✅ User agent rotation
 - ✅ Screenshot capture
 - ✅ Site intelligence analysis
+- ✅ VAPT security testing
 - ✅ Dynamic URL management
 - ✅ History tracking & reporting
-- ✅ Performance monitoring
-- ✅ Error recovery
-
----
-
-## 📊 PERFORMANCE METRICS
-
-### 📈 **Real-Time Display**
-```
-[████████████████████████████████] 100% | #10,000/10,000 | Speed: 15.2/s | ETA: 0.0s
-```
-
-### 📋 **Mission Statistics**
-- **Execution Time** - Total operation duration
-- **Average Speed** - Refreshes per second
-- **Success Rate** - Completion percentage
-- **Error Count** - Failure tracking
-- **System Impact** - Resource usage
-
----
-
-## 🎨 VISUAL EFFECTS
-
-### 🌧️ **Matrix Rain**
-- Falling code animation
-- Customizable duration
-- Terminal width adaptation
-- Terminal width adaptation
-
-### ⚡ **Glitch Effects**
-- Text corruption simulation
-- Variable intensity levels
-- Random character injection
-
-### ⌨️ **Typing Animation**
-- Realistic keystroke simulation
-- Adjustable typing speed
-- Professional terminal feel
-
----
-
-## 🔗 URL MANAGEMENT SYSTEM
-
-### 🎯 **Dynamic URL Storage**
-- **Custom URL Lists** - Save frequently used URLs with meaningful names
-- **Session Persistence** - URLs automatically saved between sessions
-- **Quick Access** - Select saved URLs from numbered menu
-- **Easy Management** - Add, delete, and organize URLs on demand
-
-### 💾 **Storage Format**
-```json
-[
-  {
-    "name": "Stack Overflow",
-    "url": "https://stackoverflow.com"
-  },
-  {
-    "name": "GitHub",
-    "url": "https://github.com"
-  }
-]
-```
-
-### 🔧 **Management Options**
-- **In-App Management** - Use option "Manage saved URLs" during target selection
-- **Standalone Tool** - Run `python manage_urls.py` for dedicated URL management
-- **Direct File Edit** - Modify `saved_urls.json` directly if needed
-
-### ✨ **Features**
-- **Auto-Save Option** - Automatically save custom URLs when entered
-- **Smart Naming** - Auto-generate names from domain if not specified
-- **Clean Interface** - No hardcoded presets, fully customizable
-- **Lightweight Storage** - Simple JSON format for easy backup/sharing
 
 ---
 
 ## 🔍 SITE INTELLIGENCE SYSTEM
 
-### 🎯 **Comprehensive Target Analysis**
-- **Page Metrics** - Load time, size, performance data
-- **Content Analysis** - Links, images, forms, scripts count
-- **Technology Detection** - Frameworks and libraries identification
-- **Security Assessment** - HTTPS, cookies, headers analysis
-- **SEO Information** - Title, description, keywords extraction
-
-### 📈 **Real-Time Intelligence Display**
+### 📊 **Real-Time Analysis**
 ```
 +==============================================================+
 |                    SITE INTELLIGENCE REPORT                 |
 +==============================================================+
 [TARGET] https://example.com
 [TITLE] Example Domain
-[DOMAIN] example.com
-[TIMESTAMP] 2025-01-01 12:00:00
-
 [PERFORMANCE METRICS]
   Load Time: 0.85s
   Page Size: 1,256 bytes
   Security: HTTPS
 
 [CONTENT ANALYSIS]
-  Links: 15
-  Images: 8
-  Forms: 2
-  Scripts: 5
-  Stylesheets: 3
-  Cookies: 4
+  Links: 15 | Images: 8 | Forms: 2
+  Scripts: 5 | Stylesheets: 3 | Cookies: 4
 
 [TECHNOLOGIES DETECTED]
-  • jQuery
-  • Bootstrap
-  • React
+  • jQuery • Bootstrap • React
 ```
 
-### 📁 **Automated History Tracking**
-- **JSON Reports** - Detailed analysis saved per site
-- **Organized Storage** - Files named by domain and timestamp
-- **Historical Comparison** - Track changes over time
-- **Export Ready** - Standard JSON format for integration
-
-### 🔎 **Intelligence Categories**
-- **Technical Stack** - JavaScript frameworks, CSS libraries
-- **Performance Data** - Load times, page sizes, response metrics
-- **Security Posture** - SSL status, cookie configuration
-- **Content Structure** - Element counts, form analysis
-- **SEO Optimization** - Meta tags, descriptions, keywords
-
 ---
 
-## 🔒 STEALTH CAPABILITIES
+## 🧪 TROUBLESHOOTING
 
-### 🥷 **Anti-Detection**
-- WebDriver property removal
-- Automation flag hiding
-- Natural browsing patterns
+### ⚠️ **Common Issues**
 
-### 🔄 **Dynamic Rotation**
-- User agent switching
-- Proxy cycling (if enabled)
-- Request timing variation
-
-### 📱 **Fingerprint Masking**
-- Browser signature spoofing
-- Plugin enumeration blocking
-- Canvas fingerprint protection
-
----
-
-## 🧪 TESTING SUITE
-
-### 🔬 **Comprehensive Tests**
+#### **ChromeDriver Problems**
 ```bash
-python -m unittest test_refresh_bot.py -v
+# Update ChromeDriver
+pip install --upgrade selenium webdriver-manager
 ```
 
-### 📋 **Test Coverage**
-- Unit tests for all functions
-- Integration testing
-- Performance benchmarks
-- Error handling validation
-- UI component testing
+#### **Memory Errors**
+- Reduce concurrent operations
+- Use headless mode
+- Lower refresh count
 
----
+#### **Network Issues**
+- Check internet connection
+- Verify proxy settings
+- Increase timeout values
 
-## 🎯 USE CASES
-
-### 🔧 **Development**
-- Web application stress testing
-- Load balancer verification
-- Session timeout testing
-- Cache invalidation testing
-
-### 🔍 **Monitoring**
-- Website availability checking
-- Performance benchmarking
-- Uptime monitoring
-- Response time analysis
-
-### 🎮 **Gaming**
-- Auto-refresh for limited releases
-- Inventory monitoring
-- Price tracking
-- Availability alerts
-
-### 🔬 **Research**
-- Web scraping preparation
-- Rate limit testing
-- Server response analysis
-- Network behavior study
+#### **VAPT Testing Issues**
+- Ensure target URL is accessible
+- Check for WAF/security measures
+- Verify network connectivity
 
 ---
 
 ## ⚙️ SYSTEM REQUIREMENTS
 
 ### 💻 **Minimum**
-- Python 3.7+
+- Python 3.9+
 - 4GB RAM
 - Chrome Browser
-- 100MB Disk Space
+- Internet connection
 
 ### 🚀 **Recommended**
-- Python 3.9+
+- Python 3.11+
 - 8GB RAM
 - SSD Storage
 - High-speed Internet
 
 ---
 
-## 🔧 ADVANCED CUSTOMIZATION
+## 🚨 ETHICAL USAGE & DISCLAIMER
 
-### 🎨 **Visual Themes**
-- Matrix green (default)
-- Cyberpunk neon
-- Terminal amber
-- Hacker red
+### ⚖️ **Legal Compliance**
+- **ONLY test websites you own or have explicit permission to test**
+- Follow responsible disclosure practices
+- Comply with local laws and regulations
+- Respect website terms of service
 
-### ⚡ **Performance Tuning**
-- Thread pool sizing
-- Memory allocation
-- Network timeouts
-- Retry mechanisms
+### 🛡️ **Security Research Guidelines**
+- Use VAPT features for legitimate security assessment only
+- Do not attempt to exploit discovered vulnerabilities
+- Report security issues responsibly
+- Maintain confidentiality of sensitive findings
 
-### 🔌 **Plugin System**
-- Custom effects
-- Additional browsers
-- External integrations
-- API extensions
-
----
-
-## 🛡️ SECURITY FEATURES
-
-### 🔒 **Privacy Protection**
-- No data logging
-- Local execution only
-- Secure memory handling
-- Clean exit procedures
-
-### 🥷 **Anonymity**
-- IP rotation support
-- DNS over HTTPS
-- Traffic obfuscation
-- Timing randomization
+### 📋 **Intended Use Cases**
+- Personal website security testing
+- Authorized penetration testing
+- Educational cybersecurity research
+- Development environment testing
 
 ---
 
-## 📁 PROJECT STRUCTURE
+## 📫 SUPPORT & CONTACT
 
-```
-.
-├── assets/
-│   └── assets/rf.png
-├── docs/
-│   ├── CHANGELOG.md
-│   ├── CONTRIBUTING.md
-│   ├── DEVELOPMENT.md
-│   ├── FIX_SUMMARY.md
-│   ├── SITE_INTELLIGENCE_FEATURE.md
-│   ├── TROUBLESHOOTING.md
-│   └── URL_MANAGEMENT_UPDATE.md
-├── history/
-├── reports/
-├── saved_urls/
-├── scripts/
-│   ├── install_dependencies.bat
-│   └── run_refresh_bot.bat
-├── src/
-│   ├── demo_url_selection.py
-│   ├── manage_urls.py
-│   ├── refresh_bot.py
-│   └── view_history.py
-├── tests/
-│   ├── test.py
-│   ├── test_refresh_bot.py
-│   └── test_vapt.py
-├── .gitignore
-├── .roomodes
-├── README.md
-└── requirements.txt
-```
-
----
-
-## 🤝 CONTRIBUTING
-
-### 🔥 **Join the Revolution**
-1. Fork the repository
-2. Create feature branch
-3. Implement enhancements
-4. Submit pull request
-
-### 💡 **Enhancement Ideas**
-- Additional browser support
-- Mobile device simulation
-- API integration
-- Cloud deployment
-- Machine learning optimization
-
----
-
-## 📫 Contact
-
-- Email: itisaddy7@gmail.com
-- Repository: https://github.com/Xenonesis/Refresho.git
+- **Email:** itisaddy7@gmail.com
+- **Repository:** https://github.com/Xenonesis/Refresho.git
+- **Issues:** Create detailed bug reports with system information
 
 ---
 
 ## 📜 LICENSE
 
-MIT License
+MIT License - Copyright (c) 2025 Addy@Xenonesis
 
-Copyright (c) 2025 Addy@Xenonesis
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
 
 ---
 
 ## 🎉 CREDITS
 
-**🔥 Engineered by Addy@Xenonesis**
-**💀 Built for the Elite**
-**⚡ Powered by Pure Code**
+**🔥 Engineered by Addy@Xenonesis**  
+**💀 Enhanced VAPT Features by Roo (Claude Sonnet 4)**  
+**⚡ Built for Elite Cybersecurity Professionals**
 
 ---
 
-## 🚨 DISCLAIMER
-
-REFRESHO v4.0 is designed for legitimate testing, development, and security assessment purposes only. Users are responsible for complying with all applicable laws and website terms of service. The VAPT features are intended for ethical hacking and security research on systems you have explicit permission to test.
-
----
-
-## 💻 Tech Stack
-
-<p align="center">
-  <img src="assets/rf.png" alt="Refresho Logo" width="200"/>
-</p>
-
-### 🚀 Core Technologies
-
-<table>
-  <tr>
-    <td align="center" width="25%">
-      <img src="https://img.icons8.com/color/96/000000/python.png" alt="Python" width="48"/>
-      <br>
-      <strong>Python 🐍</strong>
-      <p>Core programming language powering the application logic</p>
-    </td>
-    <td align="center" width="25%">
-      <img src="https://img.icons8.com/color/96/000000/selenium-test-automation.png" alt="Selenium" width="48"/>
-      <br>
-      <strong>Selenium 🌐</strong>
-      <p>Browser automation engine supporting multiple browsers</p>
-    </td>
-    <td align="center" width="25%">
-      <img src="https://img.icons8.com/color/96/000000/chrome.png" alt="Chromedriver" width="48"/>
-      <br>
-      <strong>Chromedriver 🚗</strong>
-      <p>Chrome-specific WebDriver for precise browser control</p>
-    </td>
-    <td align="center" width="25%">
-      <img src="https://img.icons8.com/color/96/000000/json.png" alt="JSON" width="48"/>
-      <br>
-      <strong>JSON 📦</strong>
-      <p>Efficient data storage and URL management system</p>
-    </td>
-  </tr>
-</table>
-
-### 🔗 Technology Stack Diagram
-
-```mermaid
-graph TD
-    A[Python 🐍] --> B[Selenium 🌐]
-    B --> C[Chromedriver 🚗]
-    C --> D[JSON 📦]
-    style A fill:#3572A5,color:#fff
-    style B fill:#43B02A,color:#fff
-    style C fill:#F7C52F,color:#000
-    style D fill:#F16529,color:#fff
-```
-
-### 🛠️ Key Features
-- **Python:** Advanced automation scripts and logic
-- **Selenium:** Cross-browser compatibility
-- **Chromedriver:** Precise browser control
-- **JSON:** Lightweight data storage
-
----
-
-## 🚀 REFRESHO MISSION QUOTES ⚡
-
-[![View Animated Version](https://img.shields.io/badge/View-Animated_Version-blue?style=for-the-badge&logo=github)](https://xenonesis.github.io/Refresho/mission-quotes.html)
-
----
-
-### 🎯 Our Core Principles
-
-> #### "When you need to refresh the web, you need REFRESHO."
-> *The foundation of our mission*
-
-> #### "Hack the refresh. Own the web."
-> *Our approach to web automation*
-
-> #### "One bot to refresh them all."
-> *The power of our technology*
-
-> #### "In the world of web, persistence is power."
-> *Our core philosophy*
-
-> #### "REFRESHO: Because manual refresh is too mainstream."
-> *Our modern solution*
-
----
-
-**#HackTheWeb #RefreshThePlanet #CodeLikeABeast**
-
-**#HackTheWeb #RefreshThePlanet #CodeLikeABeast**
+**#HackTheWeb #RefreshThePlanet #VAPTMaster #CyberSecurity**
