@@ -540,30 +540,64 @@ graph TD
 
 <style>
   .mission-quotes {
-    background: linear-gradient(45deg, #1a1a1a, #0d0d0d);
+    background: linear-gradient(45deg, #0a0a0a, #020202);
     border: 2px solid #00ff88;
-    border-radius: 15px;
-    padding: 20px;
-    margin: 40px 0;
-    box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+    border-radius: 25px;
+    padding: 30px;
+    margin: 50px 0;
+    box-shadow: 0 0 30px rgba(0, 255, 136, 0.4);
     animation: glow 3s ease-in-out infinite alternate;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .mission-quotes::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 255, 136, 0.1) 10%, transparent 50%);
+    animation: rotate 10s linear infinite;
+    z-index: 0;
   }
 
   .mission-quotes h2 {
     text-align: center;
     color: #00ff88;
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
     animation: text-glow 2s ease-in-out infinite alternate;
+    position: relative;
+    z-index: 1;
   }
 
   .mission-quotes blockquote {
     color: #fff;
-    font-size: 1.2rem;
-    margin: 15px 0;
-    padding-left: 20px;
-    border-left: 3px solid #00ff88;
+    font-size: 1.3rem;
+    margin: 20px 0;
+    padding: 15px 20px;
+    border-left: 4px solid #00ff88;
     animation: slide-in 0.5s ease-out;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+  }
+
+  .mission-quotes blockquote:hover {
+    transform: translateX(10px);
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .mission-quotes blockquote::before {
+    content: '»';
+    color: #00ff88;
+    font-size: 1.5rem;
+    margin-right: 10px;
   }
 
   .mission-quotes blockquote:nth-child(odd) {
@@ -571,18 +605,39 @@ graph TD
   }
 
   @keyframes glow {
-    0% { box-shadow: 0 0 20px rgba(0, 255, 136, 0.3); }
-    100% { box-shadow: 0 0 40px rgba(0, 255, 136, 0.6); }
+    0% { box-shadow: 0 0 30px rgba(0, 255, 136, 0.3); }
+    100% { box-shadow: 0 0 50px rgba(0, 255, 136, 0.6); }
   }
 
   @keyframes text-glow {
     0% { text-shadow: 0 0 5px rgba(0, 255, 136, 0.3); }
-    100% { text-shadow: 0 0 15px rgba(0, 255, 136, 0.6); }
+    100% { text-shadow: 0 0 20px rgba(0, 255, 136, 0.6); }
   }
 
   @keyframes slide-in {
-    0% { transform: translateX(-20px); opacity: 0; }
+    0% { transform: translateX(-30px); opacity: 0; }
     100% { transform: translateX(0); opacity: 1; }
+  }
+
+  @keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  @media (max-width: 768px) {
+    .mission-quotes {
+      padding: 20px;
+      margin: 30px 0;
+    }
+    
+    .mission-quotes h2 {
+      font-size: 2rem;
+    }
+    
+    .mission-quotes blockquote {
+      font-size: 1.1rem;
+      padding: 10px 15px;
+    }
   }
 </style>
 
