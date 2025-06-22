@@ -384,7 +384,7 @@ python -m unittest test_refresh_bot.py -v
 ```
 .
 ├── assets/
-│   └── rf.png
+│   └── assets/rf.png
 ├── docs/
 │   ├── CHANGELOG.md
 │   ├── CONTRIBUTING.md
@@ -483,7 +483,7 @@ REFRESHO v4.0 is designed for legitimate testing, development, and security asse
 ## 💻 Tech Stack
 
 <p align="center">
-  <img src="rf.png" alt="Refresho Logo" width="200"/>
+  <img src="assets/rf.png" alt="Refresho Logo" width="200"/>
 </p>
 
 ### 🚀 Core Technologies
