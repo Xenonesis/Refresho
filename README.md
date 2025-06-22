@@ -538,14 +538,62 @@ graph TD
 
 ---
 
-╔══════════════════════════════════════════════════════════════════╗
-║                      REFRESHO MISSION QUOTES                      ║
-╠══════════════════════════════════════════════════════════════════╣
-║  > "When you need to refresh the web, you need REFRESHO."  🚀    ║
-║  > "Hack the refresh. Own the web."  💀                          ║
-║  > "One bot to refresh them all."  ⚡                            ║
-║  > "In the world of web, persistence is power."  🔥              ║
-║  > "REFRESHO: Because manual refresh is too mainstream."  🌐     ║
-╚══════════════════════════════════════════════════════════════════╝
+<style>
+  .mission-quotes {
+    background: linear-gradient(45deg, #1a1a1a, #0d0d0d);
+    border: 2px solid #00ff88;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 40px 0;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+    animation: glow 3s ease-in-out infinite alternate;
+  }
+
+  .mission-quotes h2 {
+    text-align: center;
+    color: #00ff88;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    animation: text-glow 2s ease-in-out infinite alternate;
+  }
+
+  .mission-quotes blockquote {
+    color: #fff;
+    font-size: 1.2rem;
+    margin: 15px 0;
+    padding-left: 20px;
+    border-left: 3px solid #00ff88;
+    animation: slide-in 0.5s ease-out;
+  }
+
+  .mission-quotes blockquote:nth-child(odd) {
+    animation-delay: 0.2s;
+  }
+
+  @keyframes glow {
+    0% { box-shadow: 0 0 20px rgba(0, 255, 136, 0.3); }
+    100% { box-shadow: 0 0 40px rgba(0, 255, 136, 0.6); }
+  }
+
+  @keyframes text-glow {
+    0% { text-shadow: 0 0 5px rgba(0, 255, 136, 0.3); }
+    100% { text-shadow: 0 0 15px rgba(0, 255, 136, 0.6); }
+  }
+
+  @keyframes slide-in {
+    0% { transform: translateX(-20px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+  }
+</style>
+
+<div class="mission-quotes">
+  <h2>🚀 REFRESHO MISSION QUOTES ⚡</h2>
+  
+  <blockquote>"When you need to refresh the web, you need REFRESHO."</blockquote>
+  <blockquote>"Hack the refresh. Own the web."</blockquote>
+  <blockquote>"One bot to refresh them all."</blockquote>
+  <blockquote>"In the world of web, persistence is power."</blockquote>
+  <blockquote>"REFRESHO: Because manual refresh is too mainstream."</blockquote>
+</div>
 
 **#HackTheWeb #RefreshThePlanet #CodeLikeABeast**
