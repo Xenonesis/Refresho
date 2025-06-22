@@ -1,3 +1,5 @@
+Developed by Addy@Xenonesis
+
 # 🔥 REFRESHO v3.0 - ULTIMATE WEB REFRESHER BEAST
 
 ```
@@ -455,19 +457,36 @@ REFRESHO v3.0 is designed for legitimate testing and development purposes only. 
   <img src="rf.png" alt="Refresho Logo" width="200"/>
 </p>
 
-Refresho is built primarily with **Python**, leveraging its versatility for scripting and automation. The core web interaction is powered by **Selenium WebDriver**, enabling robust browser automation and interaction with web elements.
+**Tech Stack:**
+```
+           🐍 PYTHON 🐍
+          /             \
+         /   SELENIUM    \
+        /       🌐        \
+       /  CHROMEDRIVER    \
+      /        🚗         \
+     /      JSON DB       \
+    /         📦          \
+   ======================= 
+   Built with Modern Tech
+```
 
-**Key Technologies:**
-- **Python:** The primary programming language for the application logic.
-- **Selenium WebDriver:** Used for browser automation, supporting various browsers like Chrome.
-- **Chromedriver:** The specific WebDriver for controlling Chrome.
-- **JSON:** For structured data storage, particularly for URL management.
-- **Command Line Interface (CLI):** For user interaction and configuration.
-
-This combination provides a powerful, flexible, and extensible platform for web refreshing and site intelligence.
+- **Python:** Core programming language powering the application logic
+- **Selenium WebDriver:** Browser automation engine supporting multiple browsers
+- **Chromedriver:** Chrome-specific WebDriver for precise browser control
+- **JSON:** Efficient data storage and URL management system
 
 ---
 
-*"When you need to refresh the web, you need REFRESHO."* 🚀💀
+╔══════════════════════════════════════════════════════════════════╗
+║                     [REFRESHO MISSION QUOTES]                     ║
+║--------------------------------------------------------------    ║
+║ > "When you need to refresh the web, you need REFRESHO." 🚀      ║
+║ > "Hack the refresh. Own the web." 💀                           ║
+║ > "One bot to refresh them all." ⚡                              ║
+║ > "In the world of web, persistence is power." 🔥               ║
+║ > "REFRESHO: Because manual refresh is too mainstream." 🌐       ║
+╚═════════════════════════════════════════════════════════════════╝
+
 
 **#HackTheWeb #RefreshThePlanet #CodeLikeABeast**
