@@ -217,7 +217,7 @@ Solution: Use advanced stealth features and rotate identities.
 - [Official Documentation](https://github.com/Xenonesis/Refresho/docs)
 - [Community Forum](https://github.com/Xenonesis/Refresho/discussions)
 - [Issue Tracker](https://github.com/Xenonesis/Refresho/issues)
-- [Change Log](https://github.com/Xenonesis/Refresho/CHANGELOG.md)
+- [Change Log](docs/CHANGELOG.md)
 
 ## Getting Help
 

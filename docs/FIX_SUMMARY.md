@@ -40,7 +40,7 @@
 ## �� Changes Made
 
 ### Modified Files:
-1. **`refresh_bot.py`**:
+1. **`src/refresh_bot.py`**:
    - Fixed Chrome options configuration
    - Added webdriver-manager integration
    - Improved error handling for WebDriver operations
@@ -61,20 +61,20 @@
    - All necessary dependencies included
 
 3. **`install_dependencies.bat`**:
-   - **Updated** to remove redundant ChromeDriver installation step, as it's now handled by `refresh_bot.py`
+   - **Updated** to remove redundant ChromeDriver installation step, as it's now handled by `src/refresh_bot.py`
 
 4. **`run_refresh_bot.bat`**:
-   - **Confirmed** to correctly reference `test_refresh_bot.py` for test execution. No changes were required for this file.
+   - **Confirmed** to correctly reference `tests/test_refresh_bot.py` for test execution. No changes were required for this file.
 
 5. **New/Modified Supporting Files**:
-   - `test_refresh_bot.py` - **New** comprehensive combined test suite (replaces `test.py` and `test_vapt.py`)
+   - `tests/test_refresh_bot.py` - **New** comprehensive combined test suite (replaces `test.py` and `test_vapt.py`)
    - `install_dependencies.bat` - Automated dependency installation
-   - `manage_urls.py` - Standalone URL management utility
+   - `src/manage_urls.py` - Standalone URL management utility
    - `FIX_SUMMARY.md` - This complete summary document
 
 ## ✅ **Non-Required Files Deleted:**
 
-- `demo_url_selection.py` - Removed as it was a non-essential demo file.
+- `src/demo_url_selection.py` - Removed as it was a non-essential demo file.
 
 ## ✅ Verification
 
@@ -87,7 +87,7 @@ The fix has been tested and verified:
 - ✅ Error handling improved
 - ✅ All dependencies properly configured
 - ✅ Complete file structure with all functions
-- ✅ Combined test file `test_refresh_bot.py` created and old test files deleted
+- ✅ Combined test file `tests/test_refresh_bot.py` created and old test files deleted
 - ✅ `.bat` files updated/confirmed as per latest changes
 
 ## �� How to Use
@@ -98,7 +98,7 @@ The fix has been tested and verified:
 3. Follow the interactive configuration prompts
 
 ### Alternative:
-- Use the existing `run_refresh_bot.bat` which handles everything automatically
+- Use the existing `scripts/run_refresh_bot.bat` which handles everything automatically
 
 ## �� Technical Details
 

@@ -41,7 +41,7 @@
 
 #### **2. Standalone Tool**
 ```bash
-python manage_urls.py
+python src/manage_urls.py
 ```
 - Dedicated URL management utility
 - Clean command-line interface

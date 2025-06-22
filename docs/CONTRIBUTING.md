@@ -1,4 +1,4 @@
-![REFRESHO](rf.png)
+![REFRESHO](../assets/rf.png)
 
 # Contributing to REFRESHO
 

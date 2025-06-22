@@ -87,7 +87,7 @@ When running REFRESHO, you'll be prompted to enable Site Intelligence and VAPT:
 ### 2. **View Analysis Reports**
 Use the included history viewer:
 ```bash
-python view_history.py
+python src/view_history.py
 ```
 This viewer has been updated to display the VAPT results alongside the site intelligence data.
 
@@ -172,7 +172,7 @@ python -m unittest test_refresh_bot.py -v
 
 View saved reports:
 ```bash
-python view_history.py
+python src/view_history.py
 ```
 
 ---

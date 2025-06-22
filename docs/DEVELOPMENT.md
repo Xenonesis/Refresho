@@ -1,4 +1,4 @@
-![REFRESHO](rf.png)
+![REFRESHO](../assets/rf.png)
 
 # Development Guide for REFRESHO
 
@@ -40,7 +40,6 @@ This guide covers everything you need to know to start developing REFRESHO.
 3. **Install Dependencies**
    ```bash
    pip install -r requirements.txt
-   pip install -r requirements-dev.txt  # Development dependencies
    ```
 
 4. **Configure IDE**
@@ -53,15 +52,36 @@ This guide covers everything you need to know to start developing REFRESHO.
 
 ### Core Components
 ```
-refresho/
-├── refresh_bot.py          # Main application logic (includes URL management, browser control, site analysis, VAPT)
-├── requirements.txt        # Power dependencies
-├── run_refresh_bot.bat    # Windows launcher
-├── test_refresh_bot.py    # Comprehensive test suite (unittest)
-└── utils/                  # (Optional: for future standalone utilities)
-    ├── logger.py           # Logging utilities (if needed)
-    ├── config.py           # Configuration management (if needed)
-    └── helpers.py          # Helper functions (if needed)
+.
+├── assets/
+│   └── rf.png
+├── docs/
+│   ├── CHANGELOG.md
+│   ├── CONTRIBUTING.md
+│   ├── DEVELOPMENT.md
+│   ├── FIX_SUMMARY.md
+│   ├── SITE_INTELLIGENCE_FEATURE.md
+│   ├── TROUBLESHOOTING.md
+│   └── URL_MANAGEMENT_UPDATE.md
+├── history/
+├── reports/
+├── saved_urls/
+├── scripts/
+│   ├── install_dependencies.bat
+│   └── run_refresh_bot.bat
+├── src/
+│   ├── demo_url_selection.py
+│   ├── manage_urls.py
+│   ├── refresh_bot.py
+│   └── view_history.py
+├── tests/
+│   ├── test.py
+│   ├── test_refresh_bot.py
+│   └── test_vapt.py
+├── .gitignore
+├── .roomodes
+├── README.md
+└── requirements.txt
 ```
 
 ### Key Classes and Their Responsibilities
@@ -167,8 +187,8 @@ class ComponentName:
 ```python
 import unittest
 from unittest.mock import patch, MagicMock
-# Import classes/functions from refresh_bot to test
-from refresh_bot import URLManager, SiteAnalyzer, VAPTAnalyzer, create_chrome_driver
+# Import classes/functions from src/refresh_bot to test
+from src.refresh_bot import URLManager, SiteAnalyzer, VAPTAnalyzer, create_chrome_driver
 
 class TestComponentName(unittest.TestCase): # Example Test Class
     """Test suite for ComponentName"""
@@ -189,7 +209,7 @@ class TestComponentName(unittest.TestCase): # Example Test Class
 ### Running Tests
 ```bash
 # Run the comprehensive test suite
-python -m unittest test_refresh_bot.py -v
+python -m unittest tests/test_refresh_bot.py -v
 ```
 
 ## Debugging

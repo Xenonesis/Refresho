@@ -382,15 +382,36 @@ python -m unittest test_refresh_bot.py -v
 ## 📁 PROJECT STRUCTURE
 
 ```
-refresho-v4/
-├── refresh_bot.py          # Main beast engine
-├── requirements.txt        # Power dependencies
-├── run_refresh_bot.bat    # Windows launcher
-├── test_refresh_bot.py    # Comprehensive test suite (VAPT and core functions)
-├── README.md              # This documentation
-├── screenshots/           # Captured intel
-├── history/               # Site analysis reports
-└── logs/                  # Operation records
+.
+├── assets/
+│   └── rf.png
+├── docs/
+│   ├── CHANGELOG.md
+│   ├── CONTRIBUTING.md
+│   ├── DEVELOPMENT.md
+│   ├── FIX_SUMMARY.md
+│   ├── SITE_INTELLIGENCE_FEATURE.md
+│   ├── TROUBLESHOOTING.md
+│   └── URL_MANAGEMENT_UPDATE.md
+├── history/
+├── reports/
+├── saved_urls/
+├── scripts/
+│   ├── install_dependencies.bat
+│   └── run_refresh_bot.bat
+├── src/
+│   ├── demo_url_selection.py
+│   ├── manage_urls.py
+│   ├── refresh_bot.py
+│   └── view_history.py
+├── tests/
+│   ├── test.py
+│   ├── test_refresh_bot.py
+│   └── test_vapt.py
+├── .gitignore
+├── .roomodes
+├── README.md
+└── requirements.txt
 ```
 
 ---
