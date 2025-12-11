@@ -14,7 +14,7 @@
 
 ---
 
-## 🚀 ENHANCED FEATURES v5.0
+## 🚀 ENHANCED FEATURES v5.0+
 
 ### 🔥 **CORE CAPABILITIES**
 - **Matrix Rain Animation** - Real-time falling code effect
@@ -23,8 +23,9 @@
 - **Site Intelligence System** - Comprehensive target reconnaissance
 - **URL Management** - Dynamic URL storage and organization
 - **Performance Analytics** - Real-time metrics and reporting
+- **Modular Architecture** - Clean, maintainable code structure
 
-### 🛡️ **COMPREHENSIVE VAPT TOOLKIT** ⭐ NEW ⭐
+### 🛡️ **COMPREHENSIVE VAPT TOOLKIT**
 - **SQL Injection Testing** - 8 different payload patterns
 - **XSS Vulnerability Testing** - Reflected XSS detection
 - **Directory Traversal Testing** - Path traversal vulnerability checks
@@ -35,11 +36,71 @@
 - **WAF Detection** - Identifies 8 major Web Application Firewalls
 - **HTTP Methods Testing** - Dangerous method identification
 - **Security Headers Analysis** - 13 critical security headers
+- **CORS Policy Testing** - Cross-origin resource sharing analysis
+
+### 🆕 **ADVANCED FEATURES v5.0+** ⭐ NEW ⭐
+
+#### **Performance Monitoring**
+- Real-time load time tracking
+- Response time analysis
+- Statistical reporting (min, max, mean, median, std dev)
+- Performance trend analysis
+
+#### **API Testing Framework**
+- REST API endpoint testing
+- Multiple HTTP methods (GET, POST, PUT, DELETE)
+- Custom headers and payloads
+- Response time measurement
+- Success rate calculation
+
+#### **Load Testing**
+- Configurable request counts
+- Concurrent or sequential execution
+- Performance metrics
+- Requests per second measurement
+
+#### **Webhook Notifications**
+- Discord webhook integration
+- Slack webhook integration
+- Microsoft Teams webhook integration
+- Custom webhook support
+- Real-time mission notifications
+
+#### **Report Export System**
+- JSON export
+- CSV export
+- HTML export with styling
+- Markdown export
+- Auto-save reports
+
+#### **Plugin Architecture**
+- Extensible plugin system
+- Event-driven hooks
+- Built-in Logger plugin
+- Built-in Statistics plugin
+- Custom plugin support
+
+#### **Automated Testing**
+- GitHub Actions CI/CD
+- Pytest integration
+- Multi-platform testing
+- Code quality checks
+- Security scanning
 
 ### ⚡ **INTELLIGENT MODES**
 - **🥷 STEALTH MODE** - 1-1000 refreshes (Undetectable)
 - **💥 ASSAULT MODE** - 1001-10000 refreshes (Balanced)
 - **☢️ NUCLEAR MODE** - 10001-9999999 refreshes (Maximum power)
+
+---
+
+## 📚 NEW DOCUMENTATION
+
+- **[Advanced Features Guide](docs/ADVANCED_FEATURES.md)** - Complete guide to new features
+- **[Plugin Development Guide](docs/PLUGIN_DEVELOPMENT.md)** - Create custom plugins
+- **[Usage Guide](docs/USAGE_GUIDE.md)** - Comprehensive usage instructions
+- **[VAPT Features](docs/VAPT_ENHANCED_FEATURES.md)** - Security testing documentation
+- **[Changelog](docs/CHANGELOG.md)** - Version history and updates
 
 ---
 
