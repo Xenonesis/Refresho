@@ -1,0 +1,69 @@
+{
+  "version": "5.0",
+  "general": {
+    "default_url": "https://github.com/Xenonesis",
+    "default_refresh_count": 10,
+    "default_delay": 1.0,
+    "headless_mode": true,
+    "stealth_mode": false,
+    "user_agent_rotation": false,
+    "screenshot_on_complete": true
+  },
+  "vapt": {
+    "enabled": false,
+    "scan_depth": "medium",
+    "check_security_headers": true,
+    "check_sensitive_files": true,
+    "test_sql_injection": false,
+    "test_xss": false,
+    "test_cors": true,
+    "timeout": 10
+  },
+  "performance": {
+    "enable_monitoring": true,
+    "track_load_times": true,
+    "track_response_times": true,
+    "generate_performance_report": true
+  },
+  "webhooks": {
+    "enabled": false,
+    "notify_on_complete": true,
+    "notify_on_error": true,
+    "discord_webhook": "",
+    "slack_webhook": "",
+    "teams_webhook": "",
+    "custom_webhook": ""
+  },
+  "reporting": {
+    "auto_save_reports": true,
+    "report_format": "json",
+    "report_directory": "reports",
+    "export_formats": ["json", "html", "markdown"],
+    "keep_history": true,
+    "max_history_items": 100
+  },
+  "plugins": {
+    "enabled": true,
+    "plugin_directory": "plugins",
+    "auto_load": true,
+    "enabled_plugins": ["Logger", "Statistics"]
+  },
+  "advanced": {
+    "proxy_rotation": false,
+    "proxy_list": [],
+    "max_retries": 3,
+    "retry_delay": 2,
+    "connection_timeout": 30,
+    "page_load_timeout": 60,
+    "enable_javascript": true,
+    "enable_images": true,
+    "enable_css": true
+  },
+  "logging": {
+    "enabled": true,
+    "log_level": "INFO",
+    "log_file": "logs/refresho.log",
+    "log_rotation": true,
+    "max_log_size_mb": 10
+  }
+}

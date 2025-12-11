@@ -331,7 +331,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 ## 🎉 CREDITS
 
 **🔥 Engineered by Addy@Xenonesis**  
-**💀 Enhanced VAPT Features by Roo (Claude Sonnet 4)**  
 **⚡ Built for Elite Cybersecurity Professionals**
 
 ---
