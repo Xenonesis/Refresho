@@ -1,13 +1,13 @@
 {
-  "timestamp": "2025-06-22 14:26:36",
+  "timestamp": "2025-06-24 04:26:09",
   "url": "https://github.com/Xenonesis",
   "domain": "github.com",
   "title": "Xenonesis (_7adi;) · GitHub",
   "description": "👋 Hi, I'm Aditya Kumar Tiwari, a Cyber Security enthusiast currently pursuing a Bachelor of Computer Applications at Sushant University.  - Xenonesis",
   "keywords": "",
   "status_code": 200,
-  "page_size": 690381,
-  "load_time": 0.17,
+  "page_size": 693135,
+  "load_time": 0.29,
   "technologies": [
     "React",
     "Vue.js"
@@ -15,7 +15,7 @@
   "links": {
     "internal": 0,
     "external": 0,
-    "total": 289
+    "total": 290
   },
   "images": 122,
   "forms": 5,
@@ -83,172 +83,6 @@
       22
     ],
     "sql_injection": [],
-    "xss_vulnerabilities": [],
-    "directory_traversal": [],
-    "ssl_analysis": {
-      "version": "TLSv1.3",
-      "cipher": [
-        "TLS_AES_128_GCM_SHA256",
-        "TLSv1.3",
-        128
-      ],
-      "subject": {
-        "commonName": "github.com"
-      },
-      "issuer": {
-        "countryName": "GB",
-        "stateOrProvinceName": "Greater Manchester",
-        "localityName": "Salford",
-        "organizationName": "Sectigo Limited",
-        "commonName": "Sectigo ECC Domain Validation Secure Server CA"
-      },
-      "serial_number": "AB6686B5627BE80596821330128649F5",
-      "not_before": "Feb  5 00:00:00 2025 GMT",
-      "not_after": "Feb  5 23:59:59 2026 GMT",
-      "san": [
-        [
-          "DNS",
-          "github.com"
-        ],
-        [
-          "DNS",
-          "www.github.com"
-        ]
-      ]
-    },
-    "subdomains": [
-      "www.github.com",
-      "admin.github.com",
-      "test.github.com",
-      "api.github.com",
-      "blog.github.com",
-      "shop.github.com",
-      "support.github.com",
-      "help.github.com",
-      "docs.github.com"
-    ],
-    "cookie_analysis": [
-      {
-        "name": "logged_in",
-        "domain": ".github.com",
-        "path": "/",
-        "secure": true,
-        "httpOnly": true,
-        "sameSite": "Lax",
-        "value_length": 2,
-        "issues": []
-      },
-      {
-        "name": "_octo",
-        "domain": ".github.com",
-        "path": "/",
-        "secure": true,
-        "httpOnly": false,
-        "sameSite": "Lax",
-        "value_length": 26,
-        "issues": [
-          "Cookie not marked as HttpOnly"
-        ]
-      },
-      {
-        "name": "tz",
-        "domain": ".github.com",
-        "path": "/",
-        "secure": true,
-        "httpOnly": false,
-        "sameSite": "Lax",
-        "value_length": 15,
-        "issues": [
-          "Cookie not marked as HttpOnly"
-        ]
-      },
-      {
-        "name": "preferred_color_mode",
-        "domain": ".github.com",
-        "path": "/",
-        "secure": true,
-        "httpOnly": false,
-        "sameSite": "Lax",
-        "value_length": 4,
-        "issues": [
-          "Cookie not marked as HttpOnly"
-        ]
-      },
-      {
-        "name": "cpu_bucket",
-        "domain": ".github.com",
-        "path": "/",
-        "secure": true,
-        "httpOnly": false,
-        "sameSite": "Lax",
-        "value_length": 3,
-        "issues": [
-          "Cookie not marked as HttpOnly"
-        ]
-      },
-      {
-        "name": "_gh_sess",
-        "domain": "github.com",
-        "path": "/",
-        "secure": true,
-        "httpOnly": true,
-        "sameSite": "Lax",
-        "value_length": 364,
-        "issues": []
-      }
-    ],
-    "csrf_protection": {
-      "has_protection": true,
-      "tokens_found": [
-        {
-          "name": "authenticity_token",
-          "value_length": 88
-        },
-        {
-          "name": "authenticity_token",
-          "value_length": 88
-        },
-        {
-          "name": "authenticity_token",
-          "value_length": 86
-        }
-      ],
-      "forms_analyzed": 5
-    },
-    "waf_detection": [],
-    "http_methods": [
-      {
-        "method": "GET",
-        "status_code": 200
-      },
-      {
-        "method": "POST",
-        "status_code": 403
-      },
-      {
-        "method": "PUT",
-        "status_code": 403
-      },
-      {
-        "method": "DELETE",
-        "status_code": 403
-      },
-      {
-        "method": "OPTIONS",
-        "status_code": 404
-      },
-      {
-        "method": "HEAD",
-        "status_code": 200
-      },
-      {
-        "method": "PATCH",
-        "status_code": 403
-      },
-      {
-        "method": "CONNECT",
-        "status_code": 400
-      }
-    ]
+    "xss_vulnerabilities": []
   }
 }

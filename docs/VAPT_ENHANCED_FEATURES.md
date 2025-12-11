@@ -1,175 +1,110 @@
-# Enhanced VAPT (Vulnerability Assessment and Penetration Testing) Features
+# REFRESHO v5.0 - VAPT ENHANCED FEATURES
 
-## Overview
-The REFRESHO v4.0 tool now includes comprehensive cybersecurity and penetration testing capabilities that perform real vulnerability assessments on target websites.
+## Security Testing Capabilities
 
-## New VAPT Features
+REFRESHO v5.0 includes comprehensive Vulnerability Assessment and Penetration Testing (VAPT) features that allow users to assess the security posture of web applications. These features are designed for educational and authorized security testing purposes only.
 
-### 1. SQL Injection Testing
-- **Function**: `test_sql_injection(url)`
-- **Description**: Tests common parameters for SQL injection vulnerabilities
-- **Payloads**: 8 different SQL injection patterns including:
-  - `' OR '1'='1`
-  - `' OR 1=1--`
-  - `' UNION SELECT NULL--`
-  - `'; DROP TABLE users--`
-- **Detection**: Identifies SQL error patterns in responses
-- **Parameters Tested**: id, user, username, search, q, name, email
+## Key VAPT Features
 
-### 2. Cross-Site Scripting (XSS) Testing
-- **Function**: `test_xss_vulnerabilities(url)`
-- **Description**: Tests for reflected XSS vulnerabilities
-- **Payloads**: 8 different XSS vectors including:
-  - `<script>alert('XSS')</script>`
-  - `<img src=x onerror=alert('XSS')>`
-  - `<svg onload=alert('XSS')>`
-- **Detection**: Checks if payloads are reflected in response
-- **Parameters Tested**: search, q, name, comment, message, input
+### 1. Security Headers Analysis
+- Checks for 13 critical security headers
+- Identifies missing security controls
+- Evaluates header configurations
 
-### 3. Directory Traversal Testing
-- **Function**: `test_directory_traversal(url)`
-- **Description**: Tests for path traversal vulnerabilities
-- **Payloads**: 7 different traversal patterns including:
-  - `../../etc/passwd`
-  - `../../../windows/system32/drivers/etc/hosts`
-  - URL-encoded variants
-- **Detection**: Looks for system file content patterns
-- **Parameters Tested**: file, page, include, path, doc, document
+### 2. SQL Injection Testing
+- Tests 8 different SQL injection payloads
+- Checks common parameters for vulnerabilities
+- Detects SQL error patterns in responses
 
-### 4. SSL/TLS Security Analysis
-- **Function**: `analyze_ssl_tls(url)`
-- **Description**: Comprehensive SSL/TLS configuration analysis
-- **Information Gathered**:
-  - SSL/TLS version
-  - Cipher suite information
-  - Certificate details (subject, issuer, validity)
-  - Subject Alternative Names (SAN)
-- **Security Assessment**: Identifies weak configurations
+### 3. Cross-Site Scripting (XSS) Detection
+- Tests 8 XSS vectors for reflected vulnerabilities
+- Identifies unfiltered user input
+- Detects DOM-based vulnerabilities
 
-### 5. Subdomain Enumeration
-- **Function**: `enumerate_subdomains(domain)`
-- **Description**: Discovers subdomains using DNS resolution
-- **Common Subdomains Tested**: 24 common prefixes including:
-  - www, mail, ftp, admin, test, dev, staging, api
-  - blog, shop, store, secure, login, portal
-  - help, docs, cdn, static, assets
-- **Method**: DNS resolution testing
+### 4. Directory Traversal Testing
+- Tests 7 path traversal patterns
+- Checks for file inclusion vulnerabilities
+- Detects improper input validation
 
-### 6. Cookie Security Analysis
-- **Function**: `analyze_cookies(driver)`
-- **Description**: Comprehensive cookie security assessment
-- **Security Checks**:
-  - Secure flag presence
-  - HttpOnly flag presence
-  - SameSite attribute configuration
-  - Cookie size validation
-- **Risk Assessment**: Identifies insecure cookie configurations
+### 5. SSL/TLS Analysis
+- Certificate validation and details
+- Cipher suite assessment
+- Protocol version analysis
+- Expiration date verification
 
-### 7. CSRF Protection Testing
-- **Function**: `test_csrf_protection(url, driver)`
-- **Description**: Tests for Cross-Site Request Forgery protection
-- **Detection Methods**:
-  - Searches for CSRF tokens in forms
-  - Identifies token patterns (csrf, token, _token)
-  - Analyzes token implementation
-- **Assessment**: Determines protection effectiveness
+### 6. Subdomain Enumeration
+- DNS-based subdomain discovery
+- Common subdomain pattern testing
+- Domain intelligence gathering
 
-### 8. Web Application Firewall (WAF) Detection
-- **Function**: `detect_waf(url)`
-- **Description**: Identifies popular WAF solutions
-- **WAF Signatures**: Detects 8 major WAFs:
-  - Cloudflare, AWS WAF, Incapsula
-  - ModSecurity, F5 BIG-IP, Barracuda
-  - Sucuri, Akamai
-- **Method**: Header and content pattern analysis
+### 7. Cookie Security Analysis
+- HttpOnly flag verification
+- Secure flag validation
+- SameSite attribute checking
+- Cookie scope assessment
 
-### 9. HTTP Methods Testing
-- **Function**: `check_http_methods(url)`
-- **Description**: Tests allowed HTTP methods
-- **Methods Tested**: GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH, TRACE, CONNECT
-- **Security Assessment**: Identifies potentially dangerous methods
-- **Risk Evaluation**: Highlights methods like PUT, DELETE, TRACE
+### 8. CSRF Protection Testing
+- Token implementation verification
+- Form analysis for CSRF controls
+- Security control validation
 
-### 10. Enhanced Security Headers Analysis
-- **Function**: `check_security_headers(url)`
-- **Description**: Comprehensive security header analysis
-- **Headers Checked**: 13 important security headers including:
-  - Strict-Transport-Security
-  - Content-Security-Policy
-  - X-Content-Type-Options
-  - X-Frame-Options
-  - Server information disclosure
+### 9. WAF Detection
+- Identifies 8 major Web Application Firewalls
+- Signature-based detection
+- Security control mapping
 
-## Usage
+### 10. HTTP Methods Testing
+- Dangerous method identification
+- OPTIONS method analysis
+- Unnecessary method detection
 
-### Enabling VAPT Mode
-1. Run the REFRESHO tool
-2. During configuration, select "Yes" for VAPT mode
-3. The tool will perform comprehensive security testing
+### 11. Port Scanning
+- Basic port scan for common services
+- Service identification
+- Open port reporting
 
-### Output Format
-- **Color-coded results**: Green (secure), Yellow (warnings), Red (vulnerabilities)
-- **Detailed analysis**: Each test provides specific findings
-- **Risk categorization**: Clear identification of security issues
-- **Actionable information**: Specific parameters and payloads that triggered findings
+### 12. Sensitive File Detection
+- Common sensitive file discovery
+- Configuration file detection
+- Backup file identification
 
-### Report Generation
-- All VAPT results are saved to JSON files in the `history/` directory
-- Reports include:
-  - Timestamp and target information
-  - Detailed vulnerability findings
-  - Technical details for remediation
+## Ethical Usage Guidelines
 
-## Security Considerations
-
-### Ethical Usage
 - Only test websites you own or have explicit permission to test
-- Follow responsible disclosure practices
-- Respect rate limits and avoid overwhelming target servers
-
-### Legal Compliance
-- Ensure compliance with local laws and regulations
-- Obtain proper authorization before testing
-- Use only for legitimate security assessment purposes
+- Use these features for legitimate security assessment only
+- Do not attempt to exploit discovered vulnerabilities
+- Report security issues responsibly
+- Maintain confidentiality of sensitive findings
 
 ## Technical Implementation
 
-### Error Handling
-- Robust exception handling for network issues
-- Graceful degradation when tests fail
-- Timeout protection for all network operations
+The VAPT features are implemented in the `VAPTAnalyzer` class within the main application. Each security test is designed to be non-intrusive and follows responsible security testing practices.
 
-### Performance Optimization
-- Efficient payload delivery
-- Minimal false positives
-- Configurable timeouts and delays
+## Sample VAPT Report
 
-### Accuracy Features
-- Multiple detection methods per vulnerability type
-- Pattern matching with low false positive rates
-- Comprehensive coverage of common attack vectors
+```
++==============================================================+
+|                      VAPT ANALYSIS REPORT                    |
++==============================================================+
 
-## Future Enhancements
+[SECURITY HEADERS]
+  • Strict-Transport-Security: max-age=31536000
+  • Content-Security-Policy: default-src 'self'
+  • X-Frame-Options: DENY
 
-### Planned Features
-- Advanced SQL injection techniques
-- Blind XSS testing capabilities
-- LDAP injection testing
-- XML External Entity (XXE) testing
-- Server-Side Request Forgery (SSRF) testing
+[SQL INJECTION VULNERABILITIES]
+  No SQL injection vulnerabilities detected.
 
-### Integration Possibilities
-- Custom payload libraries
-- External vulnerability databases
-- Automated reporting systems
-- CI/CD pipeline integration
+[XSS VULNERABILITIES]
+  No XSS vulnerabilities detected.
 
-## Disclaimer
+[COOKIE SECURITY ANALYSIS]
+  [!] sessionid: Cookie not marked as Secure
+  • auth_token: Secure configuration
 
-This tool is designed for educational and authorized security testing purposes only. Users are responsible for ensuring they have proper authorization before testing any systems. The developers are not responsible for any misuse of this tool.
-
----
-
-**Version**: REFRESHO v4.0  
-**Last Updated**: 2025-06-22  
-**Author**: Addy@Xenonesis
+[OPEN PORTS (BASIC SCAN)]
+  [!] Port 80 (HTTP) is OPEN
+  [!] Port 443 (HTTPS) is OPEN
+  [!] Port 22 (SSH) is OPEN
++==============================================================+
+```

@@ -1,4 +1,4 @@
-# 🔥 REFRESHO v4.0 - ULTIMATE WEB REFRESHER & VAPT TOOLKIT
+# 🔥 REFRESHO v5.0 - ULTIMATE WEB REFRESHER & VAPT TOOLKIT
 
 ```
 ██████╗ ███████╗███████╗██████╗ ███████╗███████╗██╗  ██╗ ██████╗
@@ -9,12 +9,12 @@
 ╚═╝  ╚═╝╚══════╝╚═╝     ╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝ ╚═════╝
 ```
 
-**🎯 The Most Advanced Web Refresher & Cybersecurity Assessment Tool**  
+**🎯 The Most Advanced Web Refresher & Cybersecurity Assessment Tool v5.0**  
 **💀 Developed by Addy@Xenonesis**
 
 ---
 
-## 🚀 ENHANCED FEATURES v4.0
+## 🚀 ENHANCED FEATURES v5.0
 
 ### 🔥 **CORE CAPABILITIES**
 - **Matrix Rain Animation** - Real-time falling code effect
@@ -45,9 +45,26 @@
 
 ## 🎮 QUICK START
 
-### 🖱️ **Simple Launch**
+### 🚀 **Launch Options**
+
+#### **Option 1: Interactive Launcher (Recommended)**
+```bash
+python launch.py
+```
+
+#### **Option 2: Safe Demo Mode**
+```bash
+python demo.py
+```
+
+#### **Option 3: Full Application**
 ```bash
 python src/refresh_bot.py
+```
+
+#### **Option 4: Windows Batch File**
+```bash
+run_refresh_bot.bat
 ```
 
 ### 📦 **Installation**
@@ -55,7 +72,7 @@ python src/refresh_bot.py
 git clone https://github.com/Xenonesis/Refresho.git
 cd refresho
 pip install -r requirements.txt
-python src/refresh_bot.py
+python launch.py
 ```
 
 ---
@@ -124,12 +141,22 @@ python src/refresh_bot.py
 
 ---
 
-## 📁 PROJECT STRUCTURE (CLEANED)
+## 📁 PROJECT STRUCTURE
 
 ```
 .
 ├── src/
-│   └── refresh_bot.py          # Main application
+│   ├── __init__.py
+│   ├── refresh_bot.py          # Main application
+│   ├── vapt_analyzer.py        # Security testing module
+│   ├── ui_components.py        # User interface elements
+│   ├── browser_controller.py   # WebDriver management
+│   ├── config_manager.py       # Configuration handling
+│   └── mission_controller.py   # Mission execution logic
+├── tests/
+│   ├── __init__.py
+│   ├── test_refresh_bot.py     # Main test suite
+│   └── test_features.py        # Feature tests
 ├── docs/
 │   └── VAPT_ENHANCED_FEATURES.md
 ├── assets/
@@ -137,7 +164,12 @@ python src/refresh_bot.py
 ├── history/                    # Site analysis reports
 ├── reports/                    # Mission reports
 ├── saved_urls/                 # URL storage
+├── screenshots/                # Captured screenshots
+├── launch.py                   # Interactive launcher
+├── demo.py                     # Safe demo mode
 ├── requirements.txt
+├── run_refresh_bot.bat
+├── .gitignore
 └── README.md
 ```
 
